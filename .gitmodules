@@ -1,0 +1,3 @@
+[submodule "pypi_utils"]
+	path = pypi_utils
+	url = git@github.com:OakNorthAI/pypi_utils.git

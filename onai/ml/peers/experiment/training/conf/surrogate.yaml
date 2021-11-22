@@ -1,0 +1,10 @@
+m:
+  training_ds: "/ph"
+  repr:
+    quantiser_cfg_path: "s3://oaknorth-ml-dev-eu-west-1/iat/data/peers/financial_quantiser.yaml"
+
+hydra:
+  job_logging:
+    formatters:
+      simple:
+        format: '[%(asctime)s {%(filename)s:%(lineno)d:%(name)s} %(levelname)s - %(message)s'

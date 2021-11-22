@@ -1,0 +1,92 @@
+[tool.poetry]
+name = "oaknorth-ml-lib"
+version = "2.4.0"
+description = "ML Libraries of OakNorth"
+authors = ["Iat Chong Chan <iat.chan@oaknorth.ai>",
+           "Anne Poite<anne.poite@oaknorth.ai>"]
+
+packages = [
+    { include = "onai" }
+]
+
+exclude = [ "onai/ml/tests/*" ]
+
+[tool.poetry.dependencies]
+python = "~3.7.3"
+elasticsearch = "^7.0"
+semantic = "^1.0"
+elasticsearch_dsl = "^7.0"
+mock = "^3.0"
+langdetect = "^1.0"
+pandas = "^0.25.0"
+bs4 = "^0.0.1"
+html2text = "^2018.1"
+tqdm = "^4.32"
+scrapy = "^1.7"
+gensim = "^3.8"
+pyarrow = "^0.14.1"
+fasttext = "^0.9.1"
+xlrd = "^1.2.0"
+krippendorff = "^0.3.2"
+transformers = "~3.2.0"
+# we use a model that can be used only in spacy 2.2
+spacy= "<=2.2.3"
+en_core_web_lg = "2.2.5"
+
+numpy = "^1.18.1"
+scipy = "^1.4.1"
+scikit-learn= "^0.22.1"
+
+xlsxwriter = "^1.2.7"
+py4j = "^0.10.9"
+editdistance = "^0.5.3"
+pdf2image = "^1.12.1"
+pikepdf = "^1.10.2"
+tabulate = "^0.8.6"
+ray = "^0.8.2"
+bayesian-optimization = "^1.1.0"
+scikit-image = "^0.16.2"
+# s3fs is used by panda.io
+s3fs = "^0.4.2"
+torch = "~1.6.0"
+torchvision = "^0.7.0"
+"pdfminer.six" = "^20200402"
+flake8-logging-format = "^0.6.0"
+werkzeug = "^1.0.1"
+onnxruntime = "^1.3.0"
+# Do not update until https://github.com/google/sentencepiece/issues/505 is resolved
+sentencepiece = "<=0.1.91"
+pycountry = "^19.8.18"
+pytorch-lightning = "^0.8.5"
+omegaconf = "^2.0.0"
+hydra-core = { version = "^1.0.0-rc.2", allow-prereleases = true }
+bsddb3 = "^6.2.7"
+pickle5 = "^0.0.11"
+oaknorth-ml-tools = { version = "^1.6.0", extras = ["sagemaker"] }
+
+[tool.poetry.dev-dependencies]
+flask = "^1.1"
+flask_graphql = "^2.0"
+graphene = "^2.1"
+sparkmagic = "^0.12.9"
+awscli = "^1.16.226"
+jupyter = "^1.0"
+pytest = "^6.0"
+gpy = "^1.9"
+gpyopt = "^1.2"
+black = "19.3b0"
+flake8 = "^3.7"
+isort = "^4.3"
+sagemaker = "^1.72.0"
+
+pytest-xdist = "^2.1.0"
+
+[tool.dephell.main]
+from = {format = "poetry", path = "pyproject.toml"}
+to = {format = "setuppy", path = "setup.py"}
+[[tool.poetry.source]]
+name = "oaknorth-read-only"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple/"
+[build-system]
+requires = ["poetry==1.1.0"]
+build-backend = "poetry.masonry.api"

@@ -1,0 +1,192 @@
+kind: Project
+name: onai-ml
+defaultEnvironment: dev
+variables:
+  AWS_ACCOUNT_ID: 823139504911
+  AWS_PRIMARY_REGION: eu-west-1
+  PYTEST_ARG: "onai/ml/tests"
+environments:
+  - name: dev
+providers:
+  - name: kubernetes
+    environments: [dev]
+    context: ${var.ctx}
+    namespace: ${var.ns}
+    deploymentRegistry:
+      hostname: "${var.AWS_ACCOUNT_ID}.dkr.ecr.${var.AWS_PRIMARY_REGION}.amazonaws.com"
+      namespace: test-garden
+    imagePullSecrets:
+      - name: ecr-repo-onai-ml
+      - name: ecr-repo-data-infra
+      - name: ecr-repo-infra
+      - name: ecr-repo-prod-berry
+    buildMode: cluster-buildkit
+    resources:
+      builder:
+        requests:
+          cpu: 1000
+          memory: 2000
+        limits:
+          cpu: 6000
+          memory: 16000
+
+---
+kind: Module
+name: user-efs-pv
+type: kubernetes
+manifests:
+  - apiVersion: v1
+    kind: PersistentVolume
+    metadata:
+      name: ${var.ns}-user-efs
+    spec:
+      capacity:
+        storage: 1000Gi
+      volumeMode: Filesystem
+      accessModes:
+        - ReadWriteMany
+      persistentVolumeReclaimPolicy: Retain
+      storageClassName: user-efs
+      mountOptions:
+        - hard
+        - nfsvers=4.1
+        - noresvport
+        - wsize=1048576
+        - rsize=1048576
+      nfs:
+        server: fs-c18a2d0b.efs.eu-west-1.amazonaws.com
+        # TODO: the should point to a specific user folder
+        # for now, we will stick to the root folder, but this is quite dangerous
+        path: /
+
+---
+kind: Module
+name: user-efs-pvc
+include: []
+type: persistentvolumeclaim
+dependencies:
+  - user-efs-pv
+spec:
+  accessModes: [ReadWriteMany]
+  resources:
+    requests:
+      storage: 1Gi # this does not really matter.
+  volumeName: ${var.ns}-user-efs
+  storageClassName: "user-efs"
+---
+kind: Module
+name: ml
+type: kubernetes
+manifests:
+  - apiVersion: v1
+    kind: Service
+    metadata:
+      name: ml
+    spec:
+      clusterIP: None
+      selector:
+        service: ml-dev
+      ports:
+        - name: nb
+          protocol: TCP
+          port: 8888
+          targetPort: 8888
+---
+kind: Module
+type: container
+name: smbase-build
+description: Builds the smbase image
+dockerfile: docker/ml.base.Dockerfile
+image: test-garden/mlbase
+include:
+  - docker/ml.base.Dockerfile
+  - Makefile
+  - pypi_utils/**
+  - pyproject.toml
+  - poetry.lock
+  - scripts/sm_deps.sh
+  - scripts/install-python.sh
+buildArgs:
+  BASE_IMG: nvidia/cuda:11.0-cudnn8-runtime-rc
+build:
+  timeout: 1800
+  targetImage: ml_sm_base
+---
+kind: Module
+type: container
+name: initialise-efs-venv
+image: ${modules.smbase-build.outputs.deployment-image-id}
+tasks:
+  - name: initialise-efs-venv
+    command: ["./sm_deps.sh"]
+    env:
+      POETRY_VENV_PATH: /mnt/efs/sm_poetry_cache/${modules.smbase-build.version}
+    volumes:
+      - name: user-efs
+        module: user-efs-pvc
+        containerPath: /mnt/efs
+build:
+  dependencies:
+    - smbase-build
+---
+kind: Module
+type: container
+name: mlbase-build
+description: Builds the mlbase image
+dockerfile: docker/ml.base.Dockerfile
+image: test-garden/mlbase
+include:
+  - docker/ml.base.Dockerfile
+  - Makefile
+  - pypi_utils/**
+  - pyproject.toml
+  - poetry.lock
+  - scripts/install-python.sh
+build:
+  timeout: 1800
+  targetImage: ml_base
+---
+kind: Module
+type: container
+name: onai-ml-dev
+description: Builds the onai-ml dev image
+dockerfile: docker/ml.dev.garden.Dockerfile
+image: test-garden/mlbase # TODO: create an mldev image.
+include:
+  - onai/**/*
+  - emr/**/*
+  - scripts/**/*
+  - setup.cfg
+  - notebooks/**/*
+  - docker/ml.dev.garden.Dockerfile
+build:
+  timeout: 1800
+  dependencies:
+    - name: mlbase-build
+buildArgs:
+  ML_BASE_IMG: ${modules.mlbase-build.outputs.deployment-image-name}:${modules.mlbase-build.version}
+services:
+  - name: ml-dev
+    ports:
+      - name: notebook
+        containerPort: 8888
+        servicePort: 8888
+      - name: sparkui
+        containerPort: 4040
+        servicePort: 4040
+    command:
+      - bash
+      - '-c'
+      - 'ln -s /mnt/efs_root/${var.addr} /mnt/efs && poetry run ./scripts/start-dev.sh'
+    limits:
+      cpu: 36000
+      memory: 25000
+    volumes:
+      - name: user-efs
+        module: user-efs-pvc
+        containerPath: /mnt/efs_root
+tests:
+  - name: unit
+    args: ["poetry", "run", "pytest", "${var.PYTEST_ARG}", "-n", "4"]
+  - name: linter
+    args: ["poetry", "run", "./scripts/linter_dryrun.sh"]

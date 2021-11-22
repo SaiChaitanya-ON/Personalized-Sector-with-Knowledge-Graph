@@ -1,0 +1,72 @@
+version: 2.1
+
+orbs:
+  aws-cli: circleci/aws-cli@0.1.13
+
+workflows:
+  version: 2
+  commit-workflow:
+    jobs:
+      - build:
+          context: ml-dev
+
+  publish:
+    jobs:
+      - publish:
+          context: ml-dev
+          filters:
+            branches:
+              only: master
+
+jobs:
+  publish:
+    docker:
+      - image: circleci/python:3.7-buster
+
+    working_directory: ~/repo
+
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "0f:18:83:ce:1f:25:81:5d:29:79:f4:1d:f5:16:94:0f"
+
+      - checkout
+
+      - run:
+          name: setup
+          command: |
+            make setup
+            poetry config virtualenvs.create true
+
+      - run:
+          name: publish the package
+          command: |
+            poetry run make publish
+
+  build:
+    docker:
+      - image: 264571470104.dkr.ecr.eu-west-1.amazonaws.com/garden/ci-builder:v-0c8de9799d
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "0f:18:83:ce:1f:25:81:5d:29:79:f4:1d:f5:16:94:0f"
+      - checkout
+      - run:
+          name: Install ml-tools
+          command: |
+            make setup
+            make pypi-login
+            pip install oaknorth-ml-tools~=1.6.0
+
+      - run:
+          name: Initialise AWS CI
+          command: setup_env init-aws-ci
+
+      - run:
+          name: Initialise Garden
+          command: setup_env init-garden
+
+      - run:
+          name: Linter and Pytest
+          no_output_timeout: 30m
+          command: garden test onai-ml-dev --logger-type=basic

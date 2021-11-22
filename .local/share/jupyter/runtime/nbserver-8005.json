@@ -1,0 +1,12 @@
+{
+  "base_url": "/",
+  "hostname": "0.0.0.0",
+  "notebook_dir": "/home/sai/onai.ml",
+  "password": false,
+  "pid": 8005,
+  "port": 8888,
+  "secure": false,
+  "sock": "",
+  "token": "6f603132880b42030c24ebc87405d9c429fce1fce2aaa351",
+  "url": "http://0.0.0.0:8888/"
+}

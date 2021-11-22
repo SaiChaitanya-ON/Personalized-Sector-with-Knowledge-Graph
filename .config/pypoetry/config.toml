@@ -1,0 +1,3 @@
+[repositories]
+[repositories.oaknorth]
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
