@@ -1,0 +1,801 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import torch\n",
+    "import torch.nn as nn\n",
+    "import torch.nn.functional as F\n",
+    "import itertools\n",
+    "import scipy.sparse as sp"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "image/png": "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zep4RYoWBqWKCHfrWC+/lChRgoEDB7J3715mz57NvHnztMM+F9PCoFQR0atXL86cOcPBgwetjlIgHDvsW7RoEcuXL8fPz4+PPvpIO+zLIy0MShURnp6ePPLII8Vir+FGd999N8HBwaxevZqtW7dqh315pIVBqSLkkUce4csvvyQhIcHqKJb4v//7P7755huCg4OJiIjA19eXN954QzvsyyUtDEoVIb6+vvj7+/PNN99YHcVSzZo146uvvmLHjh2cPn2aBg0a8NJLL3Hu3DmroxUKWhiUKmIKY8d6+SW1w76ff/6Zq1ev0qRJE8aPH8+pU6esjubWtDAoVcQMGDCA/fv3c/LkSaujuI26devy0UcfceTIEUqXLo2/vz+jR4/mxIkTVkdzS1oYlCpivL29GTlyJIsWLbI6ittJ7bAvKiqKOnXq0K5dO0aMGKEd9t1AC4NSRdDo0aP57LPP9MavTFSqVIk33niD6OhoWrRoQffu3RkwYAB79+61Oppb0MKgVBHUrFkzatWqxaZNm6yO4tbKlSvHyy+/TExMDN26dWPQoEH06tWLbdu2WR3NUloYlCqi9CR0zpUpU4bx48cTHR3NkCFDePTRR+nYsSPff/99seywTzvRU6qIunz5MnXq1CEyMpIaNWpYHadQsdlsrFixghkzZlC6dGkmTZpE//79C32HfdqJnlLF3C233MLgwYNZsmSJ1VEKHU9PT0aMGMHBgweZNGkSM2bMKFYd9mlhUKoIKyqju1nFscO+d999l48//pjGjRuzYMGCIt1hX54Kg4hUEpHNInLC/rNiJu2SHIb1XOcwvb6I7LYvv9w+PrRSykXuuusuvLy8CAsLszpKoSYiaSelFy1axMqVK7ntttv48MMPuXLlitXxXC6vewwTgK3GmAbAVvtrZ64aY/ztj34O098G3rcv/ycwOo95lFIORERPQrtY6ihya9as4YcffsDX15e3336bv//+2+poLpPXwtAfWGx/vhgYkNMFRUSArsCqm1leKZUzDz30EOvWrePSpUtWRylSUjvs27x5M/v37+e2227j9ddfLxId9uW1MFQ3xpwFsP+slkk7bxEJF5FdIpL64V8ZuGSMST2TcwaoldmGRGSsfR3hFy5cyGNspYqPKlWq0LNnT7766iuroxRJjh32xcbGFokO+7ItDCKyRUQOOXn0z8V26tovkRoB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\n",
+      "text/plain": [
+       "<Figure size 432x288 with 1 Axes>"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "\n",
+    "import networkx as nx\n",
+    "import matplotlib.pyplot as plt\n",
+    "   \n",
+    "\n",
+    "class GraphVisualization:\n",
+    "\n",
+    "    def __init__(self):\n",
+    "\n",
+    "\n",
+    "        self.visual = []\n",
+    "\n",
+    "    def addEdge(self, a, b):\n",
+    "        temp = [a, b]\n",
+    "        self.visual.append(temp)\n",
+    "\n",
+    "\n",
+    "    def visualize(self):\n",
+    "        G = nx.Graph()\n",
+    "        G.add_edges_from(self.visual)\n",
+    "        nx.draw_networkx(G,node_color='grey')\n",
+    "        plt.show()\n",
+    "\n",
+    "\n",
+    "G = GraphVisualization()\n",
+    "G.addEdge(0, 1)\n",
+    "G.addEdge(0, 2)\n",
+    "G.addEdge(1, 2)\n",
+    "G.addEdge(0, 3)\n",
+    "G.addEdge(0, 4)\n",
+    "G.addEdge(3, 4)\n",
+    "G.addEdge(0, 5)\n",
+    "\n",
+    "G.visualize()\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 62,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{}\n"
+     ]
+    }
+   ],
+   "source": [
+    "import dgl\n",
+    "import numpy as np\n",
+    "import torch as th\n",
+    "\n",
+    "g = dgl.graph(([0, 0, 1, 0, 0, 3, 0], [1, 2, 2, 3, 4, 4, 5]), num_nodes=6)\n",
+    "\n",
+    "#g = dgl.graph(([0, 0, 1, 0, 0, 3, 0], [1, 2, 2, 3, 4, 4, 5]))\n",
+    "\n",
+    "print(g.ndata)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 63,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Node Data:  {'a': tensor([[ 2.1066, -0.3390,  1.0951],\n",
+      "        [-0.4331,  1.1904,  0.3982],\n",
+      "        [ 0.6635, -0.8534,  0.3560],\n",
+      "        [ 0.5231, -0.8542, -0.2131],\n",
+      "        [ 0.1860, -1.7839, -2.1693],\n",
+      "        [ 1.9720, -0.6419, -1.0800]]), 'y': tensor([[[-0.4376,  0.6287, -0.6267,  0.5215],\n",
+      "         [ 1.1520,  0.9490,  0.5775,  0.0208],\n",
+      "         [ 1.3067, -2.4268, -1.5051, -1.4977],\n",
+      "         [-1.3306, -0.0594,  0.3451,  0.0234],\n",
+      "         [-0.1107,  0.5130,  0.4655,  0.1573]],\n",
+      "\n",
+      "        [[-0.4207, -1.4141, -0.6834,  1.2096],\n",
+      "         [ 0.9507, -0.5462, -0.1810, -1.7166],\n",
+      "         [ 0.3493, -0.8228,  0.0082, -1.2870],\n",
+      "         [ 1.7955,  0.3026,  0.9562, -0.7171],\n",
+      "         [ 0.2842,  0.9296, -0.0566,  0.2766]],\n",
+      "\n",
+      "        [[ 0.2023, -0.4682,  0.4539, -1.2494],\n",
+      "         [-1.9914, -2.2583,  0.9939,  0.3915],\n",
+      "         [-0.2293, -1.7298, -1.8171, -0.0646],\n",
+      "         [ 0.0194,  0.3603, -0.5200,  0.8592],\n",
+      "         [-1.5472, -0.5784, -0.3702,  0.3299]],\n",
+      "\n",
+      "        [[-0.7589, -0.5293, -1.5531, -0.2190],\n",
+      "         [-0.4706, -1.4357,  0.5279, -1.5283],\n",
+      "         [-0.0147,  2.0480, -1.2178, -0.5810],\n",
+      "         [ 0.9076, -0.7214,  0.1913, -1.3660],\n",
+      "         [ 0.0935,  0.7935, -0.9273,  0.4308]],\n",
+      "\n",
+      "        [[ 0.6063, -0.4019,  0.1062, -0.3382],\n",
+      "         [-0.9152,  0.9919,  0.8275,  1.9330],\n",
+      "         [ 0.9608,  0.4664,  1.9446,  0.6368],\n",
+      "         [-0.3428, -0.3784, -1.5452,  0.4483],\n",
+      "         [-1.4929, -1.7842, -1.0702,  1.4332]],\n",
+      "\n",
+      "        [[ 0.9756,  0.1616,  0.4216,  0.4094],\n",
+      "         [-0.3635,  0.3734,  2.6336, -1.4402],\n",
+      "         [-1.2374,  1.0967,  0.2096,  0.1316],\n",
+      "         [ 0.3172,  1.0786,  1.9662, -1.7714],\n",
+      "         [ 0.0396,  1.4223, -0.4190,  0.9928]]])}\n",
+      "Edge Data:  {}\n",
+      "tensor([0, 1, 2, 3, 4, 5])\n"
+     ]
+    }
+   ],
+   "source": [
+    "g.ndata['a'] = torch.randn(6, 3)\n",
+    "\n",
+    "#g.edata['b'] = torch.randn(7, 4)\n",
+    "\n",
+    "g.ndata['y'] = torch.randn(6, 5, 4)\n",
+    "\n",
+    "print(\"Node Data: \",g.ndata)\n",
+    "print(\"Edge Data: \",g.edata)\n",
+    "\n",
+    "print(g.nodes())\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "6\n",
+      "7\n",
+      "5\n",
+      "0\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(g.num_nodes())\n",
+    "print(g.num_edges())\n",
+    "\n",
+    "print(g.out_degrees(0))\n",
+    "print(g.in_degrees(0))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 39,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "  NumNodes: 2708\n",
+      "  NumEdges: 10556\n",
+      "  NumFeats: 1433\n",
+      "  NumClasses: 7\n",
+      "  NumTrainingSamples: 140\n",
+      "  NumValidationSamples: 500\n",
+      "  NumTestSamples: 1000\n",
+      "Done loading data from cached files.\n",
+      "Features tensor([[0., 0., 0.,  ..., 0., 0., 0.],\n",
+      "        [0., 0., 0.,  ..., 0., 0., 0.],\n",
+      "        [0., 0., 0.,  ..., 0., 0., 0.],\n",
+      "        ...,\n",
+      "        [0., 0., 0.,  ..., 0., 0., 0.],\n",
+      "        [0., 0., 0.,  ..., 0., 0., 0.],\n",
+      "        [0., 0., 0.,  ..., 0., 0., 0.]])\n",
+      "Features.shape torch.Size([2708, 1433])\n",
+      "Labels tensor([3, 4, 4,  ..., 3, 3, 3])\n",
+      "Train Mask tensor([ True,  True,  True,  ..., False, False, False])\n",
+      "len(Train Mask) 2708\n"
+     ]
+    }
+   ],
+   "source": [
+    "import dgl.data\n",
+    "\n",
+    "dataset = dgl.data.CoraGraphDataset()\n",
+    "g = dataset[0]\n",
+    "features = g.ndata['feat']\n",
+    "print('Features',features)\n",
+    "print('Features.shape',features.shape)\n",
+    "labels = g.ndata['label']\n",
+    "print('Labels',labels)\n",
+    "train_mask = g.ndata['train_mask']\n",
+    "print('Train Mask',train_mask)\n",
+    "print('len(Train Mask)',len(train_mask))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 40,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'feat': tensor([[0., 0., 0.,  ..., 0., 0., 0.],\n",
+      "        [0., 0., 0.,  ..., 0., 0., 0.],\n",
+      "        [0., 0., 0.,  ..., 0., 0., 0.],\n",
+      "        ...,\n",
+      "        [0., 0., 0.,  ..., 0., 0., 0.],\n",
+      "        [0., 0., 0.,  ..., 0., 0., 0.],\n",
+      "        [0., 0., 0.,  ..., 0., 0., 0.]]), 'label': tensor([3, 4, 4,  ..., 3, 3, 3]), 'val_mask': tensor([False, False, False,  ..., False, False, False]), 'test_mask': tensor([False, False, False,  ...,  True,  True,  True]), 'train_mask': tensor([ True,  True,  True,  ..., False, False, False])}\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(g.ndata)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 45,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from dgl.nn import GraphConv\n",
+    "\n",
+    "class GCN(nn.Module):\n",
+    "    def __init__(self, in_feats, h_feats, num_classes):\n",
+    "        super(GCN, self).__init__()\n",
+    "        self.conv1 = GraphConv(in_feats, h_feats)\n",
+    "        self.conv2 = GraphConv(h_feats, num_classes)\n",
+    "\n",
+    "    def forward(self, g, in_feat):\n",
+    "        h = self.conv1(g, in_feat)\n",
+    "#         print(\"layer 1: \", h)\n",
+    "#         print(\"layer 1 shape: \", h.shape)\n",
+    "        h = F.relu(h)\n",
+    "#         print(\"Relu: \", h)\n",
+    "        h = self.conv2(g, h)\n",
+    "#         print(\"layer 2: \", h)\n",
+    "#         print(\"layer 2 shape: \", h.shape)\n",
+    "        \n",
+    "        return h\n",
+    "\n",
+    "# Create the model with given dimensions\n",
+    "model = GCN(g.ndata['feat'].shape[1], 16, dataset.num_classes)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 46,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "In epoch 0, loss: 1.947, val acc: 0.082 (best 0.082), test acc: 0.076 (best 0.076)\n",
+      "In epoch 5, loss: 1.897, val acc: 0.474 (best 0.554), test acc: 0.528 (best 0.574)\n",
+      "In epoch 10, loss: 1.817, val acc: 0.584 (best 0.584), test acc: 0.606 (best 0.606)\n",
+      "In epoch 15, loss: 1.711, val acc: 0.736 (best 0.736), test acc: 0.743 (best 0.743)\n",
+      "In epoch 20, loss: 1.580, val acc: 0.750 (best 0.756), test acc: 0.763 (best 0.764)\n",
+      "In epoch 25, loss: 1.427, val acc: 0.736 (best 0.756), test acc: 0.750 (best 0.764)\n",
+      "In epoch 30, loss: 1.258, val acc: 0.758 (best 0.758), test acc: 0.761 (best 0.761)\n",
+      "In epoch 35, loss: 1.081, val acc: 0.772 (best 0.772), test acc: 0.769 (best 0.769)\n",
+      "In epoch 40, loss: 0.907, val acc: 0.774 (best 0.774), test acc: 0.766 (best 0.765)\n",
+      "In epoch 45, loss: 0.745, val acc: 0.774 (best 0.774), test acc: 0.763 (best 0.765)\n",
+      "In epoch 50, loss: 0.603, val acc: 0.774 (best 0.774), test acc: 0.772 (best 0.765)\n",
+      "In epoch 55, loss: 0.484, val acc: 0.778 (best 0.778), test acc: 0.773 (best 0.773)\n",
+      "In epoch 60, loss: 0.387, val acc: 0.784 (best 0.784), test acc: 0.775 (best 0.775)\n",
+      "In epoch 65, loss: 0.311, val acc: 0.786 (best 0.786), test acc: 0.776 (best 0.776)\n",
+      "In epoch 70, loss: 0.252, val acc: 0.786 (best 0.786), test acc: 0.779 (best 0.776)\n",
+      "In epoch 75, loss: 0.206, val acc: 0.782 (best 0.786), test acc: 0.780 (best 0.776)\n",
+      "In epoch 80, loss: 0.170, val acc: 0.784 (best 0.786), test acc: 0.775 (best 0.776)\n",
+      "In epoch 85, loss: 0.142, val acc: 0.786 (best 0.786), test acc: 0.778 (best 0.776)\n",
+      "In epoch 90, loss: 0.120, val acc: 0.788 (best 0.788), test acc: 0.779 (best 0.778)\n",
+      "In epoch 95, loss: 0.103, val acc: 0.786 (best 0.788), test acc: 0.780 (best 0.778)\n"
+     ]
+    }
+   ],
+   "source": [
+    "def train(g, model):\n",
+    "    optimizer = torch.optim.Adam(model.parameters(), lr=0.01)\n",
+    "    best_val_acc = 0\n",
+    "    best_test_acc = 0\n",
+    "\n",
+    "    features = g.ndata['feat']\n",
+    "    labels = g.ndata['label']\n",
+    "    train_mask = g.ndata['train_mask']\n",
+    "    val_mask = g.ndata['val_mask']\n",
+    "    test_mask = g.ndata['test_mask']\n",
+    "    \n",
+    "    for e in range(100):\n",
+    "    # Forward\n",
+    "        logits = model(g, features)\n",
+    "#         print('Logits.shape', logits.shape)\n",
+    "#         print('Logits', logits)\n",
+    "\n",
+    "        # Compute prediction\n",
+    "        pred = logits.argmax(1)\n",
+    "#         print('Pred', pred)\n",
+    "#         print('len(Pred)', len(pred))\n",
+    "\n",
+    "        # Compute loss\n",
+    "        # Note that you should only compute the losses of the nodes in the training set.\n",
+    "        loss = F.cross_entropy(logits[train_mask], labels[train_mask])\n",
+    "\n",
+    "        # Compute accuracy on training/validation/test\n",
+    "        train_acc = (pred[train_mask] == labels[train_mask]).float().mean()\n",
+    "    #         print('pred[train_mast] == labels[train_mask]',(pred[train_mask]==labels[train_mask]).float().mean())\n",
+    "    #         print('len(pred[train_mast])',len(pred[train_mask]))\n",
+    "        val_acc = (pred[val_mask] == labels[val_mask]).float().mean()\n",
+    "        test_acc = (pred[test_mask] == labels[test_mask]).float().mean()\n",
+    "\n",
+    "        # Save the best validation accuracy and the corresponding test accuracy.\n",
+    "        if best_val_acc < val_acc:\n",
+    "            best_val_acc = val_acc\n",
+    "            best_test_acc = test_acc\n",
+    "\n",
+    "        # Backward\n",
+    "        optimizer.zero_grad()\n",
+    "        loss.backward()\n",
+    "        optimizer.step()\n",
+    "\n",
+    "        if e % 5 == 0:\n",
+    "            print('In epoch {}, loss: {:.3f}, val acc: {:.3f} (best {:.3f}), test acc: {:.3f} (best {:.3f})'.format(\n",
+    "                e, loss, val_acc, best_val_acc, test_acc, best_test_acc))\n",
+    "\n",
+    "            \n",
+    "model = GCN(g.ndata['feat'].shape[1], 16, dataset.num_classes)\n",
+    "train(g, model)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 47,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from dgl.nn import EdgeWeightNorm, GraphConv"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "tensor([[-2.3550,  0.6410],\n",
+      "        [-2.2536,  0.6134],\n",
+      "        [-2.0636,  0.5617],\n",
+      "        [-2.1169,  0.5762],\n",
+      "        [-2.7139,  0.7387],\n",
+      "        [-2.1952,  0.5975]], grad_fn=<AddBackward0>)\n"
+     ]
+    }
+   ],
+   "source": [
+    "g = dgl.graph(([0,1,2,3,2,5], [1,2,3,4,0,3]))\n",
+    "g = dgl.add_self_loop(g)\n",
+    "feat = th.ones(6, 10)\n",
+    "edge_weight = th.tensor([0.5, 0.6, 0.4, 0.7, 0.9, 0.1, 1, 1, 1, 1, 1, 1])\n",
+    "norm = EdgeWeightNorm(norm='both')\n",
+    "norm_edge_weight = norm(g, edge_weight)\n",
+    "conv = GraphConv(10, 2, norm='none', weight=True, bias=True)\n",
+    "res = conv(g, feat, edge_weight=norm_edge_weight)\n",
+    "print(res)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "  NumNodes: 2708\n",
+      "  NumEdges: 10556\n",
+      "  NumFeats: 1433\n",
+      "  NumClasses: 7\n",
+      "  NumTrainingSamples: 140\n",
+      "  NumValidationSamples: 500\n",
+      "  NumTestSamples: 1000\n",
+      "Done loading data from cached files.\n"
+     ]
+    }
+   ],
+   "source": [
+    "import dgl.data\n",
+    "\n",
+    "dataset = dgl.data.CoraGraphDataset()\n",
+    "g = dataset[0]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 60,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "no.of edges  10556\n",
+      "eids  [    0     1     2 ... 10553 10554 10555]\n",
+      "eids  10556\n",
+      "eids  [8094 3615 9947 ... 7651 6685 5568]\n",
+      "eids  10556\n",
+      "adj:    (0, 633)\t1.0\n",
+      "  (0, 1862)\t1.0\n",
+      "  (0, 2582)\t1.0\n",
+      "  (1, 2)\t1.0\n",
+      "  (1, 652)\t1.0\n",
+      "  (1, 654)\t1.0\n",
+      "  (2, 1)\t1.0\n",
+      "  (2, 1986)\t1.0\n",
+      "  (2, 332)\t1.0\n",
+      "  (2, 1666)\t1.0\n",
+      "  (2, 1454)\t1.0\n",
+      "  (3, 2544)\t1.0\n",
+      "  (4, 2176)\t1.0\n",
+      "  (4, 1016)\t1.0\n",
+      "  (4, 1761)\t1.0\n",
+      "  (4, 1256)\t1.0\n",
+      "  (4, 2175)\t1.0\n",
+      "  (5, 1629)\t1.0\n",
+      "  (5, 2546)\t1.0\n",
+      "  (5, 1659)\t1.0\n",
+      "  (6, 1416)\t1.0\n",
+      "  (6, 1602)\t1.0\n",
+      "  (6, 1042)\t1.0\n",
+      "  (6, 373)\t1.0\n",
+      "  (7, 208)\t1.0\n",
+      "  :\t:\n",
+      "  (2694, 431)\t1.0\n",
+      "  (2694, 2695)\t1.0\n",
+      "  (2695, 431)\t1.0\n",
+      "  (2695, 2694)\t1.0\n",
+      "  (2696, 2615)\t1.0\n",
+      "  (2697, 986)\t1.0\n",
+      "  (2698, 1400)\t1.0\n",
+      "  (2698, 1573)\t1.0\n",
+      "  (2699, 2630)\t1.0\n",
+      "  (2700, 1151)\t1.0\n",
+      "  (2701, 44)\t1.0\n",
+      "  (2701, 2624)\t1.0\n",
+      "  (2702, 186)\t1.0\n",
+      "  (2702, 1536)\t1.0\n",
+      "  (2703, 1298)\t1.0\n",
+      "  (2704, 641)\t1.0\n",
+      "  (2705, 287)\t1.0\n",
+      "  (2706, 165)\t1.0\n",
+      "  (2706, 169)\t1.0\n",
+      "  (2706, 1473)\t1.0\n",
+      "  (2706, 2707)\t1.0\n",
+      "  (2707, 165)\t1.0\n",
+      "  (2707, 598)\t1.0\n",
+      "  (2707, 1473)\t1.0\n",
+      "  (2707, 2706)\t1.0\n",
+      "adj_neg:  [[0. 1. 1. ... 1. 1. 1.]\n",
+      " [1. 0. 0. ... 1. 1. 1.]\n",
+      " [1. 0. 0. ... 1. 1. 1.]\n",
+      " ...\n",
+      " [1. 1. 1. ... 0. 1. 1.]\n",
+      " [1. 1. 1. ... 1. 0. 0.]\n",
+      " [1. 1. 1. ... 1. 0. 0.]]\n",
+      "neg_u:  [   0    0    0 ... 2707 2707 2707] neg_v:  [   1    2    3 ... 2703 2704 2705]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Split edge set for training and testing\n",
+    "u, v = g.edges()\n",
+    "\n",
+    "eids = np.arange(g.number_of_edges())\n",
+    "print(\"no.of edges \",g.number_of_edges())\n",
+    "print(\"eids \",eids)\n",
+    "print(\"eids \",len(eids))\n",
+    "eids = np.random.permutation(eids)\n",
+    "print(\"eids \",eids)\n",
+    "print(\"eids \",len(eids))\n",
+    "test_size = int(len(eids) * 0.1)\n",
+    "train_size = g.number_of_edges() - test_size\n",
+    "test_pos_u, test_pos_v = u[eids[:test_size]], v[eids[:test_size]]\n",
+    "train_pos_u, train_pos_v = u[eids[test_size:]], v[eids[test_size:]]\n",
+    "\n",
+    "# Find all negative edges and split them for training and testing\n",
+    "adj = sp.coo_matrix((np.ones(len(u)), (u.numpy(), v.numpy())))\n",
+    "print(\"adj: \",adj)\n",
+    "adj_neg = 1 - adj.todense() - np.eye(g.number_of_nodes())\n",
+    "print(\"adj_neg: \",adj_neg)\n",
+    "neg_u, neg_v = np.where(adj_neg != 0)\n",
+    "print(\"neg_u: \",neg_u, \"neg_v: \", neg_v)\n",
+    "\n",
+    "neg_eids = np.random.choice(len(neg_u), g.number_of_edges())\n",
+    "test_neg_u, test_neg_v = neg_u[neg_eids[:test_size]], neg_v[neg_eids[:test_size]]\n",
+    "train_neg_u, train_neg_v = neg_u[neg_eids[test_size:]], neg_v[neg_eids[test_size:]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "train_g = dgl.remove_edges(g, eids[:test_size])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 54,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from dgl.nn import SAGEConv\n",
+    "\n",
+    "# ----------- 2. create model -------------- #\n",
+    "# build a two-layer GraphSAGE model\n",
+    "class GraphSAGE(nn.Module):\n",
+    "    def __init__(self, in_feats, h_feats):\n",
+    "        super(GraphSAGE, self).__init__()\n",
+    "        self.conv1 = SAGEConv(in_feats, h_feats, 'mean')\n",
+    "        self.conv2 = SAGEConv(h_feats, h_feats, 'mean')\n",
+    "\n",
+    "    def forward(self, g, in_feat):\n",
+    "        h = self.conv1(g, in_feat)\n",
+    "#         print(\"layer 1: \", h)\n",
+    "#         print(\"layer 1 shape: \", h.shape)\n",
+    "        h = F.relu(h)\n",
+    "        h = self.conv2(g, h)\n",
+    "#         print(\"layer 2: \", h)\n",
+    "#         print(\"layer 2 shape: \", h.shape)\n",
+    "        return h"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 55,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Train Pos Graph:  Graph(num_nodes=2708, num_edges=9501,\n",
+      "      ndata_schemes={}\n",
+      "      edata_schemes={})\n",
+      "Train Neg Graph:  Graph(num_nodes=2708, num_edges=9501,\n",
+      "      ndata_schemes={}\n",
+      "      edata_schemes={})\n",
+      "Test Pos Graph:  Graph(num_nodes=2708, num_edges=1055,\n",
+      "      ndata_schemes={}\n",
+      "      edata_schemes={})\n",
+      "Test Neg Graph:  Graph(num_nodes=2708, num_edges=1055,\n",
+      "      ndata_schemes={}\n",
+      "      edata_schemes={})\n"
+     ]
+    }
+   ],
+   "source": [
+    "train_pos_g = dgl.graph((train_pos_u, train_pos_v), num_nodes=g.number_of_nodes())\n",
+    "print(\"Train Pos Graph: \", train_pos_g)\n",
+    "train_neg_g = dgl.graph((train_neg_u, train_neg_v), num_nodes=g.number_of_nodes())\n",
+    "print(\"Train Neg Graph: \", train_neg_g)\n",
+    "\n",
+    "\n",
+    "test_pos_g = dgl.graph((test_pos_u, test_pos_v), num_nodes=g.number_of_nodes())\n",
+    "print(\"Test Pos Graph: \", test_pos_g)\n",
+    "test_neg_g = dgl.graph((test_neg_u, test_neg_v), num_nodes=g.number_of_nodes())\n",
+    "print(\"Test Neg Graph: \", test_neg_g)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 56,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import dgl.function as fn\n",
+    "\n",
+    "class DotPredictor(nn.Module):\n",
+    "    def forward(self, g, h):\n",
+    "        with g.local_scope():\n",
+    "            g.ndata['h'] = h\n",
+    "            # Compute a new edge feature named 'score' by a dot-product between the\n",
+    "            # source node feature 'h' and destination node feature 'h'.\n",
+    "            g.apply_edges(fn.u_dot_v('h', 'h', 'score'))\n",
+    "            # u_dot_v returns a 1-element vector for each edge so you need to squeeze it.\n",
+    "            return g.edata['score'][:, 0]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 57,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class MLPPredictor(nn.Module):\n",
+    "    def __init__(self, h_feats):\n",
+    "        super().__init__()\n",
+    "        self.W1 = nn.Linear(h_feats * 2, h_feats)\n",
+    "        self.W2 = nn.Linear(h_feats, 1)\n",
+    "\n",
+    "    def apply_edges(self, edges):\n",
+    "        \"\"\"\n",
+    "        Computes a scalar score for each edge of the given graph.\n",
+    "\n",
+    "        Parameters\n",
+    "        ----------\n",
+    "        edges :\n",
+    "            Has three members ``src``, ``dst`` and ``data``, each of\n",
+    "            which is a dictionary representing the features of the\n",
+    "            source nodes, the destination nodes, and the edges\n",
+    "            themselves.\n",
+    "\n",
+    "        Returns\n",
+    "        -------\n",
+    "        dict\n",
+    "            A dictionary of new edge features.\n",
+    "        \"\"\"\n",
+    "        h = torch.cat([edges.src['h'], edges.dst['h']], 1)\n",
+    "        return {'score': self.W2(F.relu(self.W1(h))).squeeze(1)}\n",
+    "\n",
+    "    def forward(self, g, h):\n",
+    "        with g.local_scope():\n",
+    "            g.ndata['h'] = h\n",
+    "            g.apply_edges(self.apply_edges)\n",
+    "            return g.edata['score']"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 58,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "model = GraphSAGE(train_g.ndata['feat'].shape[1], 16)\n",
+    "# You can replace DotPredictor with MLPPredictor.\n",
+    "#pred = MLPPredictor(16)\n",
+    "pred = DotPredictor()\n",
+    "\n",
+    "def compute_loss(pos_score, neg_score):\n",
+    "    scores = torch.cat([pos_score, neg_score])\n",
+    "    labels = torch.cat([torch.ones(pos_score.shape[0]), torch.zeros(neg_score.shape[0])])\n",
+    "    return F.binary_cross_entropy_with_logits(scores, labels)\n",
+    "\n",
+    "def compute_auc(pos_score, neg_score):\n",
+    "    scores = torch.cat([pos_score, neg_score]).numpy()\n",
+    "    labels = torch.cat(\n",
+    "        [torch.ones(pos_score.shape[0]), torch.zeros(neg_score.shape[0])]).numpy()\n",
+    "    return roc_auc_score(labels, scores)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 59,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "In epoch 0, loss: 0.6930261254310608\n",
+      "In epoch 5, loss: 0.6682918667793274\n",
+      "In epoch 10, loss: 0.59809809923172\n",
+      "In epoch 15, loss: 0.5275059342384338\n",
+      "In epoch 20, loss: 0.4833313822746277\n",
+      "In epoch 25, loss: 0.4626363217830658\n",
+      "In epoch 30, loss: 0.43276864290237427\n",
+      "In epoch 35, loss: 0.4098806083202362\n",
+      "In epoch 40, loss: 0.38816291093826294\n",
+      "In epoch 45, loss: 0.365752249956131\n",
+      "In epoch 50, loss: 0.3438956141471863\n",
+      "In epoch 55, loss: 0.3214678466320038\n",
+      "In epoch 60, loss: 0.29867616295814514\n",
+      "In epoch 65, loss: 0.2755086421966553\n",
+      "In epoch 70, loss: 0.25227090716362\n",
+      "In epoch 75, loss: 0.23016150295734406\n",
+      "In epoch 80, loss: 0.20768390595912933\n",
+      "In epoch 85, loss: 0.18656745553016663\n",
+      "In epoch 90, loss: 0.16606241464614868\n",
+      "In epoch 95, loss: 0.14644217491149902\n",
+      "AUC 0.8576312302059702\n"
+     ]
+    }
+   ],
+   "source": [
+    "# ----------- 3. set up loss and optimizer -------------- #\n",
+    "# in this case, loss will in training loop\n",
+    "optimizer = torch.optim.Adam(itertools.chain(model.parameters(), pred.parameters()), lr=0.01)\n",
+    "\n",
+    "# ----------- 4. training -------------------------------- #\n",
+    "all_logits = []\n",
+    "\n",
+    "for e in range(100):\n",
+    "    # forward\n",
+    "    h = model(train_g, train_g.ndata['feat'])\n",
+    "    #print(\"h: \", h)\n",
+    "    pos_score = pred(train_pos_g, h)\n",
+    "#     print(\"pos_score: \", pos_score)\n",
+    "    neg_score = pred(train_neg_g, h)\n",
+    "#     print(\"neg_score: \", neg_score)\n",
+    "    loss = compute_loss(pos_score, neg_score)\n",
+    "\n",
+    "    # backward\n",
+    "    optimizer.zero_grad()\n",
+    "    loss.backward()\n",
+    "    optimizer.step()\n",
+    "\n",
+    "    if e % 5 == 0:\n",
+    "        print('In epoch {}, loss: {}'.format(e, loss))\n",
+    "\n",
+    "# ----------- 5. check results ------------------------ #\n",
+    "from sklearn.metrics import roc_auc_score\n",
+    "with torch.no_grad():\n",
+    "    pos_score = pred(test_pos_g, h)\n",
+    "    neg_score = pred(test_neg_g, h)\n",
+    "    print('AUC', compute_auc(pos_score, neg_score))\n",
+    "\n",
+    "\n",
+    "# Thumbnail Courtesy: Link Prediction with Neo4j, Mark Needham\n",
+    "# sphinx_gallery_thumbnail_path = '_static/blitz_4_link_predict.png'"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.6.8"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
