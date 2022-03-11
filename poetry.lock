@@ -9,6 +9,11 @@ python-versions = "*"
 [package.dependencies]
 six = "*"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "aiohttp"
 version = "3.7.4.post0"
@@ -18,15 +23,20 @@ optional = false
 python-versions = ">=3.6"
 
 [package.dependencies]
-async-timeout = ">=3.0,<4.0"
+async_timeout = ">=3.0,<4.0"
 attrs = ">=17.3.0"
 chardet = ">=2.0,<5.0"
 multidict = ">=4.5,<7.0"
-typing-extensions = ">=3.6.5"
+typing_extensions = ">=3.6.5"
 yarl = ">=1.0,<2.0"
 
 [package.extras]
 speedups = ["aiodns", "brotlipy", "cchardet"]
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "aioredis"
@@ -40,6 +50,11 @@ python-versions = "*"
 async-timeout = "*"
 hiredis = "*"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "aniso8601"
 version = "7.0.0"
@@ -47,6 +62,11 @@ description = "A library for parsing ISO 8601 strings."
 category = "dev"
 optional = false
 python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "antlr4-python3-runtime"
@@ -56,6 +76,11 @@ category = "main"
 optional = false
 python-versions = "*"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "apipkg"
 version = "1.5"
@@ -63,6 +88,11 @@ description = "apipkg: namespace control and lazy-import mechanism"
 category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "appdirs"
@@ -72,6 +102,11 @@ category = "dev"
 optional = false
 python-versions = "*"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "appnope"
 version = "0.1.2"
@@ -79,6 +114,11 @@ description = "Disable App Nap on macOS >= 10.9"
 category = "dev"
 optional = false
 python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "argon2-cffi"
@@ -97,6 +137,11 @@ dev = ["coverage[toml] (>=5.0.2)", "hypothesis", "pytest", "sphinx", "wheel", "p
 docs = ["sphinx"]
 tests = ["coverage[toml] (>=5.0.2)", "hypothesis", "pytest"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "async-generator"
 version = "1.10"
@@ -104,6 +149,11 @@ description = "Async generators and context managers for Python 3.5+"
 category = "dev"
 optional = false
 python-versions = ">=3.5"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "async-timeout"
@@ -113,6 +163,11 @@ category = "main"
 optional = false
 python-versions = ">=3.5.3"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "atomicwrites"
 version = "1.4.0"
@@ -120,6 +175,11 @@ description = "Atomic file writes."
 category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "attrs"
@@ -134,6 +194,11 @@ dev = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", 
 docs = ["furo", "sphinx", "zope.interface", "sphinx-notfound-page"]
 tests = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "mypy", "pytest-mypy-plugins", "zope.interface"]
 tests_no_zope = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "mypy", "pytest-mypy-plugins"]
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "automat"
@@ -150,6 +215,11 @@ six = "*"
 [package.extras]
 visualize = ["graphviz (>0.5.1)", "Twisted (>=16.1.1)"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "autovizwidget"
 version = "0.18.0"
@@ -164,6 +234,11 @@ ipywidgets = ">5.0.0"
 notebook = ">=4.2"
 pandas = ">=0.20.1"
 plotly = ">=3"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "awscli"
@@ -181,6 +256,11 @@ PyYAML = ">=3.10,<5.5"
 rsa = {version = ">=3.1.2,<4.8", markers = "python_version > \"2.7\""}
 s3transfer = ">=0.4.0,<0.5.0"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "backcall"
 version = "0.2.0"
@@ -188,6 +268,11 @@ description = "Specifications for callback functions passed in to an API"
 category = "dev"
 optional = false
 python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "bayesian-optimization"
@@ -201,6 +286,11 @@ python-versions = "*"
 numpy = ">=1.9.0"
 scikit-learn = ">=0.18.0"
 scipy = ">=0.14.0"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "beautifulsoup4"
@@ -216,6 +306,11 @@ soupsieve = {version = ">1.2", markers = "python_version >= \"3.0\""}
 [package.extras]
 html5lib = ["html5lib"]
 lxml = ["lxml"]
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "black"
@@ -234,6 +329,11 @@ toml = ">=0.9.4"
 [package.extras]
 d = ["aiohttp (>=3.3.2)", "aiohttp-cors"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "bleach"
 version = "3.3.0"
@@ -247,6 +347,11 @@ packaging = "*"
 six = ">=1.9.0"
 webencodings = "*"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "blessings"
 version = "1.7"
@@ -258,6 +363,11 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 [package.dependencies]
 six = "*"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "blis"
 version = "0.4.1"
@@ -268,6 +378,11 @@ python-versions = "*"
 
 [package.dependencies]
 numpy = ">=1.15.0"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "boto3"
@@ -281,6 +396,11 @@ python-versions = ">= 2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*"
 botocore = ">=1.20.89,<1.21.0"
 jmespath = ">=0.7.1,<1.0.0"
 s3transfer = ">=0.4.0,<0.5.0"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "botocore"
@@ -298,16 +418,26 @@ urllib3 = ">=1.25.4,<1.27"
 [package.extras]
 crt = ["awscrt (==0.11.15)"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "bs4"
 version = "0.0.1"
-description = "Dummy package for Beautiful Soup"
+description = "Screen-scraping library"
 category = "main"
 optional = false
 python-versions = "*"
 
 [package.dependencies]
 beautifulsoup4 = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "bsddb3"
@@ -317,6 +447,11 @@ category = "main"
 optional = false
 python-versions = "*"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "cachetools"
 version = "4.2.2"
@@ -324,6 +459,11 @@ description = "Extensible memoizing collections and decorators"
 category = "main"
 optional = false
 python-versions = "~=3.5"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "catalogue"
@@ -336,6 +476,11 @@ python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,>=2.7"
 [package.dependencies]
 importlib-metadata = {version = ">=0.20", markers = "python_version < \"3.8\""}
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "certifi"
 version = "2021.5.30"
@@ -343,6 +488,11 @@ description = "Python package for providing Mozilla's CA Bundle."
 category = "main"
 optional = false
 python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "cffi"
@@ -355,6 +505,11 @@ python-versions = "*"
 [package.dependencies]
 pycparser = "*"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "chardet"
 version = "4.0.0"
@@ -362,6 +517,11 @@ description = "Universal encoding detector for Python 2 and 3"
 category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "click"
@@ -371,6 +531,11 @@ category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "colorama"
 version = "0.4.3"
@@ -378,6 +543,11 @@ description = "Cross-platform colored terminal text."
 category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "colorful"
@@ -390,6 +560,11 @@ python-versions = "*"
 [package.dependencies]
 colorama = {version = "*", markers = "platform_system == \"Windows\""}
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "constantly"
 version = "15.1.0"
@@ -397,6 +572,11 @@ description = "Symbolic constants in Python"
 category = "main"
 optional = false
 python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "cryptography"
@@ -417,6 +597,11 @@ sdist = ["setuptools-rust (>=0.11.4)"]
 ssh = ["bcrypt (>=3.1.5)"]
 test = ["pytest (>=6.0)", "pytest-cov", "pytest-subtests", "pytest-xdist", "pretend", "iso8601", "pytz", "hypothesis (>=1.11.4,!=3.79.2)"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "cssselect"
 version = "1.1.0"
@@ -425,16 +610,10 @@ category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
-[[package]]
-name = "cycler"
-version = "0.10.0"
-description = "Composable style cycles"
-category = "main"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-six = "*"
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "cymem"
@@ -444,13 +623,23 @@ category = "main"
 optional = false
 python-versions = "*"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "cython"
 version = "0.29.14"
 description = "The Cython compiler for writing C extensions for the Python language."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "decorator"
@@ -460,6 +649,11 @@ category = "main"
 optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "defusedxml"
 version = "0.7.1"
@@ -467,6 +661,30 @@ description = "XML bomb protection for Python stdlib modules"
 category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
+[[package]]
+name = "dgl"
+version = "0.6.1"
+description = "Deep Graph Library"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+networkx = ">=2.1"
+numpy = ">=1.14.0"
+requests = ">=2.19.0"
+scipy = ">=1.1.0"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "docutils"
@@ -476,6 +694,11 @@ category = "main"
 optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "editdistance"
 version = "0.5.3"
@@ -483,6 +706,11 @@ description = "Fast implementation of the edit distance(Levenshtein distance)"
 category = "main"
 optional = false
 python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "elasticsearch"
@@ -502,6 +730,11 @@ develop = ["requests (>=2.0.0,<3.0.0)", "coverage", "mock", "pyyaml", "pytest", 
 docs = ["sphinx (<1.7)", "sphinx-rtd-theme"]
 requests = ["requests (>=2.4.0,<3.0.0)"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "elasticsearch-dsl"
 version = "7.3.0"
@@ -517,6 +750,11 @@ six = "*"
 
 [package.extras]
 develop = ["mock", "pytest (>=3.0.0)", "pytest-cov", "pytest-mock (<3.0.0)", "pytz", "coverage (<5.0.0)", "sphinx", "sphinx-rtd-theme"]
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "en-core-web-lg"
@@ -542,6 +780,11 @@ category = "dev"
 optional = false
 python-versions = ">=2.7"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "execnet"
 version = "1.8.1"
@@ -556,6 +799,11 @@ apipkg = ">=1.4"
 [package.extras]
 testing = ["pre-commit"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "fasttext"
 version = "0.9.2"
@@ -568,6 +816,11 @@ python-versions = "*"
 numpy = "*"
 pybind11 = ">=2.2"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "filelock"
 version = "3.0.12"
@@ -575,6 +828,11 @@ description = "A platform independent file lock."
 category = "main"
 optional = false
 python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "flake8"
@@ -590,6 +848,11 @@ mccabe = ">=0.6.0,<0.7.0"
 pycodestyle = ">=2.7.0,<2.8.0"
 pyflakes = ">=2.3.0,<2.4.0"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "flake8-logging-format"
 version = "0.6.0"
@@ -597,6 +860,11 @@ description = "Flake8 extension to validate (lack of) logging format strings"
 category = "main"
 optional = false
 python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "flask"
@@ -617,6 +885,11 @@ dev = ["pytest", "coverage", "tox", "sphinx", "pallets-sphinx-themes", "sphinxco
 docs = ["sphinx", "pallets-sphinx-themes", "sphinxcontrib-log-cabinet", "sphinx-issues"]
 dotenv = ["python-dotenv"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "flask-graphql"
 version = "2.0.1"
@@ -630,6 +903,11 @@ flask = ">=0.7.0"
 graphql-core = ">=2.1,<3"
 graphql-server-core = ">=1.1,<2"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "flatbuffers"
 version = "2.0"
@@ -637,6 +915,11 @@ description = "The FlatBuffers serialization format for Python"
 category = "main"
 optional = false
 python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "fsspec"
@@ -665,6 +948,11 @@ sftp = ["paramiko"]
 smb = ["smbprotocol"]
 ssh = ["paramiko"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "future"
 version = "0.18.2"
@@ -672,6 +960,11 @@ description = "Clean single-source support for Python 3 and 2"
 category = "main"
 optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "gensim"
@@ -682,17 +975,21 @@ optional = false
 python-versions = "*"
 
 [package.dependencies]
-Cython = "0.29.14"
 numpy = ">=1.11.3"
 scipy = ">=0.18.1"
 six = ">=1.5.0"
-smart-open = ">=1.8.1"
+smart_open = ">=1.8.1"
 
 [package.extras]
 distributed = ["Pyro4 (>=4.27)"]
-docs = ["pytest", "pytest-rerunfailures", "mock", "cython", "nmslib", "pyemd", "testfixtures", "Morfessor (==2.0.2a4)", "python-Levenshtein (>=0.10.2)", "visdom (>0.1.8.7)", "scikit-learn", "Pyro4 (>=4.27)", "sphinx (<=2.4.4)", "sphinx-gallery", "sphinxcontrib.programoutput", "sphinxcontrib-napoleon", "matplotlib", "plotly", "memory-profiler", "annoy", "pyro4", "nltk", "statsmodels", "pandas"]
+docs = ["pytest", "pytest-rerunfailures", "mock", "cython", "nmslib", "pyemd", "testfixtures", "Morfessor (==2.0.2a4)", "python-Levenshtein (>=0.10.2)", "visdom (>0.1.8.7)", "scikit-learn", "Pyro4 (>=4.27)", "sphinx (<=2.4.4)", "sphinx-gallery", "sphinxcontrib.programoutput", "sphinxcontrib-napoleon", "matplotlib", "plotly", "memory-profiler", "annoy", "pyro4", "scikit-learn", "nltk", "testfixtures", "statsmodels", "pyemd", "pandas"]
 test = ["pytest", "pytest-rerunfailures", "mock", "cython", "nmslib", "pyemd", "testfixtures", "Morfessor (==2.0.2a4)", "python-Levenshtein (>=0.10.2)", "visdom (>0.1.8.7)", "scikit-learn"]
 test-win = ["pytest", "pytest-rerunfailures", "mock", "cython", "nmslib", "pyemd", "testfixtures", "Morfessor (==2.0.2a4)", "python-Levenshtein (>=0.10.2)", "visdom (>0.1.8.7)", "scikit-learn"]
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "google"
@@ -704,6 +1001,11 @@ python-versions = "*"
 
 [package.dependencies]
 beautifulsoup4 = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "google-api-core"
@@ -727,6 +1029,11 @@ grpc = ["grpcio (>=1.29.0,<2.0dev)"]
 grpcgcp = ["grpcio-gcp (>=0.2.2)"]
 grpcio-gcp = ["grpcio-gcp (>=0.2.2)"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "google-auth"
 version = "1.30.1"
@@ -746,6 +1053,11 @@ aiohttp = ["aiohttp (>=3.6.2,<4.0.0dev)"]
 pyopenssl = ["pyopenssl (>=20.0.0)"]
 reauth = ["pyu2f (>=0.1.5)"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "google-auth-oauthlib"
 version = "0.4.4"
@@ -761,6 +1073,11 @@ requests-oauthlib = ">=0.7.0"
 [package.extras]
 tool = ["click (>=6.0.0)"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "googleapis-common-protos"
 version = "1.53.0"
@@ -774,6 +1091,11 @@ protobuf = ">=3.12.0"
 
 [package.extras]
 grpc = ["grpcio (>=1.0.0)"]
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "gpustat"
@@ -791,6 +1113,11 @@ six = ">=1.7"
 
 [package.extras]
 test = ["mock (>=2.0.0)", "pytest (<5.0)"]
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "gpy"
@@ -813,6 +1140,11 @@ notebook = ["jupyter_client (>=4.0.6)", "ipywidgets (>=4.0.3)", "ipykernel (>=4.
 optional = ["mpi4py", "ipython (>=4.0.0)"]
 plotting = ["matplotlib (>=3.0)", "plotly (>=1.8.6)"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "gpyopt"
 version = "1.2.6"
@@ -829,6 +1161,11 @@ scipy = ">=0.16"
 [package.extras]
 docs = ["matplotlib (>=1.3)", "sphinx", "ipython"]
 optimizer = ["direct", "cma", "pydoe", "sobol-seq", "emcee"]
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "graphene"
@@ -849,6 +1186,11 @@ django = ["graphene-django"]
 sqlalchemy = ["graphene-sqlalchemy"]
 test = ["pytest", "pytest-benchmark", "pytest-cov", "pytest-mock", "snapshottest", "coveralls", "promise", "six", "mock", "pytz", "iso8601"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "graphql-core"
 version = "2.3.2"
@@ -866,6 +1208,11 @@ six = ">=1.10.0"
 gevent = ["gevent (>=1.1)"]
 test = ["six (==1.14.0)", "pyannotate (==1.2.0)", "pytest (==4.6.10)", "pytest-django (==3.9.0)", "pytest-cov (==2.8.1)", "coveralls (==1.11.1)", "cython (==0.29.17)", "gevent (==1.5.0)", "pytest-benchmark (==3.2.3)", "pytest-mock (==2.0.0)"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "graphql-relay"
 version = "2.0.1"
@@ -878,6 +1225,11 @@ python-versions = "*"
 graphql-core = ">=2.2,<3"
 promise = ">=2.2,<3"
 six = ">=1.12"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "graphql-server-core"
@@ -894,6 +1246,11 @@ promise = ">=2.3,<3"
 [package.extras]
 test = ["pytest (==4.6.9)", "pytest-cov (==2.8.1)"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "grpcio"
 version = "1.38.0"
@@ -907,6 +1264,11 @@ six = ">=1.5.2"
 
 [package.extras]
 protobuf = ["grpcio-tools (>=1.38.0)"]
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "hdijupyterutils"
@@ -927,6 +1289,11 @@ notebook = ">=4.2"
 numpy = "*"
 pandas = ">=0.17.1"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "hiredis"
 version = "2.0.0"
@@ -935,6 +1302,11 @@ category = "main"
 optional = false
 python-versions = ">=3.6"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "html2text"
 version = "2018.1.9"
@@ -942,6 +1314,11 @@ description = "Turn HTML into equivalent Markdown-structured text."
 category = "main"
 optional = false
 python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "hydra-core"
@@ -956,6 +1333,11 @@ antlr4-python3-runtime = "4.8"
 importlib-resources = {version = "*", markers = "python_version < \"3.9\""}
 omegaconf = ">=2.1.0dev20"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "hyperlink"
 version = "21.0.0"
@@ -967,6 +1349,11 @@ python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 [package.dependencies]
 idna = ">=2.5"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "idna"
 version = "2.10"
@@ -975,24 +1362,10 @@ category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
-[[package]]
-name = "imageio"
-version = "2.9.0"
-description = "Library for reading and writing a wide range of image, video, scientific, and volumetric data formats."
-category = "main"
-optional = false
-python-versions = ">=3.5"
-
-[package.dependencies]
-numpy = "*"
-pillow = "*"
-
-[package.extras]
-ffmpeg = ["imageio-ffmpeg"]
-fits = ["astropy"]
-full = ["astropy", "gdal", "imageio-ffmpeg", "itk"]
-gdal = ["gdal"]
-itk = ["itk"]
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "importlib-metadata"
@@ -1010,6 +1383,11 @@ zipp = ">=0.5"
 docs = ["sphinx", "jaraco.packaging (>=8.2)", "rst.linker (>=1.9)"]
 testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-cov", "pytest-enabler (>=1.0.1)", "packaging", "pep517", "pyfakefs", "flufl.flake8", "pytest-black (>=0.3.7)", "pytest-mypy", "importlib-resources (>=1.3)"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "importlib-resources"
 version = "5.1.4"
@@ -1025,6 +1403,11 @@ zipp = {version = ">=3.1.0", markers = "python_version < \"3.10\""}
 docs = ["sphinx", "jaraco.packaging (>=8.2)", "rst.linker (>=1.9)"]
 testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-cov", "pytest-enabler (>=1.0.1)", "pytest-black (>=0.3.7)", "pytest-mypy"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "incremental"
 version = "21.3.0"
@@ -1036,6 +1419,11 @@ python-versions = "*"
 [package.extras]
 scripts = ["click (>=6.0)", "twisted (>=16.4.0)"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "iniconfig"
 version = "1.1.1"
@@ -1043,6 +1431,11 @@ description = "iniconfig: brain-dead simple config-ini parsing"
 category = "dev"
 optional = false
 python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "ipykernel"
@@ -1061,6 +1454,11 @@ traitlets = ">=4.1.0"
 
 [package.extras]
 test = ["pytest (!=5.3.4)", "pytest-cov", "flaky", "nose", "jedi (<=0.17.2)"]
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "ipython"
@@ -1094,6 +1492,11 @@ parallel = ["ipyparallel"]
 qtconsole = ["qtconsole"]
 test = ["nose (>=0.10.1)", "requests", "testpath", "pygments", "nbformat", "ipykernel", "numpy (>=1.17)"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "ipython-genutils"
 version = "0.2.0"
@@ -1101,6 +1504,11 @@ description = "Vestigial utilities from IPython"
 category = "dev"
 optional = false
 python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "ipywidgets"
@@ -1121,6 +1529,11 @@ widgetsnbextension = ">=3.5.0,<3.6.0"
 [package.extras]
 test = ["pytest (>=3.6.0)", "pytest-cov", "mock"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "isort"
 version = "4.3.21"
@@ -1135,6 +1548,11 @@ pyproject = ["toml"]
 requirements = ["pipreqs", "pip-api"]
 xdg_home = ["appdirs (>=1.4.0)"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "itsdangerous"
 version = "1.1.0"
@@ -1142,6 +1560,11 @@ description = "Various helpers to pass data to untrusted environments and back."
 category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "jedi"
@@ -1158,6 +1581,11 @@ parso = ">=0.8.0,<0.9.0"
 qa = ["flake8 (==3.8.3)", "mypy (==0.782)"]
 testing = ["Django (<3.1)", "colorama", "docopt", "pytest (<6.0.0)"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "jinja2"
 version = "2.11.3"
@@ -1172,6 +1600,11 @@ MarkupSafe = ">=0.23"
 [package.extras]
 i18n = ["Babel (>=0.8)"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "jmespath"
 version = "0.10.0"
@@ -1180,6 +1613,11 @@ category = "main"
 optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "joblib"
 version = "1.0.1"
@@ -1187,6 +1625,11 @@ description = "Lightweight pipelining with Python functions"
 category = "main"
 optional = false
 python-versions = ">=3.6"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "jsonschema"
@@ -1206,6 +1649,11 @@ six = ">=1.11.0"
 format = ["idna", "jsonpointer (>1.13)", "rfc3987", "strict-rfc3339", "webcolors"]
 format_nongpl = ["idna", "jsonpointer (>1.13)", "webcolors", "rfc3986-validator (>0.1.0)", "rfc3339-validator"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "jupyter"
 version = "1.0.0"
@@ -1221,6 +1669,11 @@ jupyter-console = "*"
 nbconvert = "*"
 notebook = "*"
 qtconsole = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "jupyter-client"
@@ -1242,6 +1695,11 @@ traitlets = "*"
 doc = ["sphinx (>=1.3.6)", "sphinx-rtd-theme", "sphinxcontrib-github-alt"]
 test = ["async-generator", "ipykernel", "ipython", "mock", "pytest-asyncio", "pytest-timeout", "pytest", "mypy", "pre-commit", "jedi (<0.18)"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "jupyter-console"
 version = "6.4.0"
@@ -1260,6 +1718,11 @@ pygments = "*"
 [package.extras]
 test = ["pexpect"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "jupyter-core"
 version = "4.7.1"
@@ -1272,6 +1735,11 @@ python-versions = ">=3.6"
 pywin32 = {version = ">=1.0", markers = "sys_platform == \"win32\""}
 traitlets = "*"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "jupyterlab-pygments"
 version = "0.1.2"
@@ -1283,6 +1751,11 @@ python-versions = "*"
 [package.dependencies]
 pygments = ">=2.4.1,<3"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "jupyterlab-widgets"
 version = "1.0.0"
@@ -1291,13 +1764,10 @@ category = "dev"
 optional = false
 python-versions = ">=3.6"
 
-[[package]]
-name = "kiwisolver"
-version = "1.3.1"
-description = "A fast implementation of the Cassowary constraint solver"
-category = "main"
-optional = false
-python-versions = ">=3.6"
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "krippendorff"
@@ -1310,6 +1780,11 @@ python-versions = ">=3.6,<4.0"
 [package.dependencies]
 numpy = "*"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "langdetect"
 version = "1.0.9"
@@ -1320,6 +1795,11 @@ python-versions = "*"
 
 [package.dependencies]
 six = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "lxml"
@@ -1335,6 +1815,11 @@ html5 = ["html5lib"]
 htmlsoup = ["beautifulsoup4"]
 source = ["Cython (>=0.29.7)"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "markdown"
 version = "3.3.4"
@@ -1349,6 +1834,11 @@ importlib-metadata = {version = "*", markers = "python_version < \"3.8\""}
 [package.extras]
 testing = ["coverage", "pyyaml"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "markupsafe"
 version = "2.0.1"
@@ -1357,21 +1847,10 @@ category = "dev"
 optional = false
 python-versions = ">=3.6"
 
-[[package]]
-name = "matplotlib"
-version = "3.4.2"
-description = "Python plotting package"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[package.dependencies]
-cycler = ">=0.10"
-kiwisolver = ">=1.0.1"
-numpy = ">=1.16"
-pillow = ">=6.2.0"
-pyparsing = ">=2.2.1"
-python-dateutil = ">=2.7"
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "matplotlib-inline"
@@ -1384,6 +1863,11 @@ python-versions = ">=3.5"
 [package.dependencies]
 traitlets = "*"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "mccabe"
 version = "0.6.1"
@@ -1392,6 +1876,11 @@ category = "dev"
 optional = false
 python-versions = "*"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "mistune"
 version = "0.8.4"
@@ -1399,6 +1888,11 @@ description = "The fastest markdown parser in pure Python"
 category = "dev"
 optional = false
 python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "mock"
@@ -1416,6 +1910,11 @@ build = ["twine", "wheel", "blurb"]
 docs = ["sphinx"]
 test = ["pytest", "pytest-cov"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "msgpack"
 version = "1.0.2"
@@ -1423,6 +1922,11 @@ description = "MessagePack (de)serializer."
 category = "main"
 optional = false
 python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "multidict"
@@ -1432,6 +1936,11 @@ category = "main"
 optional = false
 python-versions = ">=3.6"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "murmurhash"
 version = "1.0.5"
@@ -1439,6 +1948,11 @@ description = "Cython bindings for MurmurHash"
 category = "main"
 optional = false
 python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "nbclient"
@@ -1459,6 +1973,11 @@ traitlets = ">=4.2"
 dev = ["codecov", "coverage", "ipython", "ipykernel", "ipywidgets", "pytest (>=4.1)", "pytest-cov (>=2.6.1)", "check-manifest", "flake8", "mypy", "tox", "bumpversion", "xmltodict", "pip (>=18.1)", "wheel (>=0.31.0)", "setuptools (>=38.6.0)", "twine (>=1.11.0)", "black"]
 sphinx = ["Sphinx (>=1.7)", "sphinx-book-theme", "mock", "moto", "myst-parser"]
 test = ["codecov", "coverage", "ipython", "ipykernel", "ipywidgets", "pytest (>=4.1)", "pytest-cov (>=2.6.1)", "check-manifest", "flake8", "mypy", "tox", "bumpversion", "xmltodict", "pip (>=18.1)", "wheel (>=0.31.0)", "setuptools (>=38.6.0)", "twine (>=1.11.0)", "black"]
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "nbconvert"
@@ -1490,6 +2009,11 @@ serve = ["tornado (>=4.0)"]
 test = ["pytest", "pytest-cov", "pytest-dependency", "ipykernel", "ipywidgets (>=7)", "pyppeteer (==0.2.2)"]
 webpdf = ["pyppeteer (==0.2.2)"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "nbformat"
 version = "5.1.3"
@@ -1508,6 +2032,11 @@ traitlets = ">=4.1"
 fast = ["fastjsonschema"]
 test = ["check-manifest", "fastjsonschema", "testpath", "pytest", "pytest-cov"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "nest-asyncio"
 version = "1.5.1"
@@ -1515,6 +2044,11 @@ description = "Patch asyncio to allow nested event loops"
 category = "dev"
 optional = false
 python-versions = ">=3.5"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "networkx"
@@ -1540,6 +2074,11 @@ pytest = ["pytest"]
 pyyaml = ["pyyaml"]
 scipy = ["scipy"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "nose"
 version = "1.3.7"
@@ -1547,6 +2086,11 @@ description = "nose extends unittest to make testing easier"
 category = "dev"
 optional = false
 python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "notebook"
@@ -1577,6 +2121,11 @@ docs = ["sphinx", "nbsphinx", "sphinxcontrib-github-alt", "sphinx-rtd-theme", "m
 json-logging = ["json-logging"]
 test = ["pytest", "coverage", "requests", "nbval", "selenium", "pytest-cov", "requests-unixsocket"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "numpy"
 version = "1.20.3"
@@ -1584,6 +2133,11 @@ description = "NumPy is the fundamental package for array computing with Python.
 category = "main"
 optional = false
 python-versions = ">=3.7"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "nvidia-ml-py3"
@@ -1593,9 +2147,14 @@ category = "main"
 optional = false
 python-versions = "*"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "oaknorth-ml-tools"
-version = "1.6.0"
+version = "1.6.1"
 description = "Tools to initialise ML repos and development environments"
 category = "main"
 optional = false
@@ -1628,6 +2187,11 @@ rsa = ["cryptography (>=3.0.0,<4)"]
 signals = ["blinker (>=1.4.0)"]
 signedtoken = ["cryptography (>=3.0.0,<4)", "pyjwt (>=2.0.0,<3)"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "omegaconf"
 version = "2.1.0"
@@ -1639,6 +2203,11 @@ python-versions = ">=3.6"
 [package.dependencies]
 antlr4-python3-runtime = "4.8"
 PyYAML = ">=5.1"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "onnxruntime"
@@ -1653,6 +2222,11 @@ flatbuffers = "*"
 numpy = ">=1.16.6"
 protobuf = "*"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "opencensus"
 version = "0.7.13"
@@ -1665,6 +2239,11 @@ python-versions = "*"
 google-api-core = ">=1.0.0,<2.0.0"
 opencensus-context = "0.1.2"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "opencensus-context"
 version = "0.1.2"
@@ -1672,6 +2251,11 @@ description = "OpenCensus Runtime Context"
 category = "main"
 optional = false
 python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "packaging"
@@ -1683,6 +2267,11 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [package.dependencies]
 pyparsing = ">=2.0.2"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "pandas"
@@ -1700,6 +2289,11 @@ pytz = ">=2017.2"
 [package.extras]
 test = ["pytest (>=4.0.2)", "pytest-xdist", "hypothesis (>=3.58)"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "pandocfilters"
 version = "1.4.3"
@@ -1707,6 +2301,11 @@ description = "Utilities for writing pandoc filters in python"
 category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "paramz"
@@ -1727,6 +2326,11 @@ docs = ["sphinx"]
 notebook = ["jupyter_client (>=4.0.6)", "ipywidgets (>=4.0.3)", "ipykernel (>=4.1.0)", "notebook (>=4.0.5)"]
 optimization = ["climin"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "parsel"
 version = "1.6.0"
@@ -1741,6 +2345,11 @@ lxml = "*"
 six = ">=1.6.0"
 w3lib = ">=1.19.0"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "parso"
 version = "0.8.2"
@@ -1753,6 +2362,11 @@ python-versions = ">=3.6"
 qa = ["flake8 (==3.8.3)", "mypy (==0.782)"]
 testing = ["docopt", "pytest (<6.0.0)"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "pdf2image"
 version = "1.15.1"
@@ -1763,6 +2377,11 @@ python-versions = "*"
 
 [package.dependencies]
 pillow = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "pdfminer.six"
@@ -1781,6 +2400,11 @@ sortedcontainers = "*"
 dev = ["nose", "tox"]
 docs = ["sphinx", "sphinx-argparse"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "pexpect"
 version = "4.8.0"
@@ -1792,6 +2416,11 @@ python-versions = "*"
 [package.dependencies]
 ptyprocess = ">=0.5"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "pickle5"
 version = "0.0.11"
@@ -1800,6 +2429,11 @@ category = "main"
 optional = false
 python-versions = "*"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "pickleshare"
 version = "0.7.5"
@@ -1807,6 +2441,11 @@ description = "Tiny 'shelve'-like database with concurrency support"
 category = "dev"
 optional = false
 python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "pikepdf"
@@ -1823,6 +2462,11 @@ Pillow = ">=6"
 [package.extras]
 docs = ["ipython", "matplotlib", "pybind11", "setuptools-scm", "sphinx (>=1.4)", "sphinx-rtd-theme"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "pillow"
 version = "8.2.0"
@@ -1831,6 +2475,11 @@ category = "main"
 optional = false
 python-versions = ">=3.6"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "plac"
 version = "1.1.3"
@@ -1838,6 +2487,11 @@ description = "The smartest command line arguments parser in the world"
 category = "main"
 optional = false
 python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "plotly"
@@ -1850,6 +2504,11 @@ python-versions = "*"
 [package.dependencies]
 retrying = ">=1.3.3"
 six = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "pluggy"
@@ -1865,6 +2524,11 @@ importlib-metadata = {version = ">=0.12", markers = "python_version < \"3.8\""}
 [package.extras]
 dev = ["pre-commit", "tox"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "preshed"
 version = "3.0.5"
@@ -1877,6 +2541,11 @@ python-versions = "*"
 cymem = ">=2.0.2,<2.1.0"
 murmurhash = ">=0.28.0,<1.1.0"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "prometheus-client"
 version = "0.11.0"
@@ -1887,6 +2556,11 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [package.extras]
 twisted = ["twisted"]
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "promise"
@@ -1902,6 +2576,11 @@ six = "*"
 [package.extras]
 test = ["pytest (>=2.7.3)", "pytest-cov", "coveralls", "futures", "pytest-benchmark", "mock"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "prompt-toolkit"
 version = "3.0.18"
@@ -1912,6 +2591,11 @@ python-versions = ">=3.6.1"
 
 [package.dependencies]
 wcwidth = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "protego"
@@ -1924,6 +2608,11 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 [package.dependencies]
 six = "*"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "protobuf"
 version = "3.17.2"
@@ -1934,6 +2623,11 @@ python-versions = "*"
 
 [package.dependencies]
 six = ">=1.9"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "protobuf3-to-dict"
@@ -1947,6 +2641,11 @@ python-versions = "*"
 protobuf = ">=2.3.0"
 six = "*"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "psutil"
 version = "5.8.0"
@@ -1958,6 +2657,11 @@ python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 [package.extras]
 test = ["ipaddress", "mock", "unittest2", "enum34", "pywin32", "wmi"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "ptyprocess"
 version = "0.7.0"
@@ -1965,6 +2669,11 @@ description = "Run a subprocess in a pseudo terminal"
 category = "dev"
 optional = false
 python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "py"
@@ -1974,6 +2683,11 @@ category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "py-spy"
 version = "0.3.7"
@@ -1982,6 +2696,11 @@ category = "main"
 optional = false
 python-versions = "*"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "py4j"
 version = "0.10.9.2"
@@ -1989,6 +2708,11 @@ description = "Enables Python programs to dynamically access arbitrary Java obje
 category = "main"
 optional = false
 python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "pyarrow"
@@ -2002,6 +2726,11 @@ python-versions = "*"
 numpy = ">=1.14"
 six = ">=1.0.0"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "pyasn1"
 version = "0.4.8"
@@ -2009,6 +2738,11 @@ description = "ASN.1 types and codecs"
 category = "main"
 optional = false
 python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "pyasn1-modules"
@@ -2021,6 +2755,11 @@ python-versions = "*"
 [package.dependencies]
 pyasn1 = ">=0.4.6,<0.5.0"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "pybind11"
 version = "2.6.2"
@@ -2032,6 +2771,11 @@ python-versions = "!=3.0,!=3.1,!=3.2,!=3.3,!=3.4,>=2.7"
 [package.extras]
 global = ["pybind11-global (==2.6.2)"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "pycodestyle"
 version = "2.7.0"
@@ -2039,6 +2783,11 @@ description = "Python style guide checker"
 category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "pycountry"
@@ -2048,6 +2797,11 @@ category = "main"
 optional = false
 python-versions = "*"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "pycparser"
 version = "2.20"
@@ -2055,6 +2809,11 @@ description = "C parser in Python"
 category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "pycryptodome"
@@ -2064,6 +2823,11 @@ category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "pydispatcher"
 version = "2.0.5"
@@ -2071,6 +2835,11 @@ description = "Multi-producer-multi-consumer signal dispatching mechanism"
 category = "main"
 optional = false
 python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "pyflakes"
@@ -2080,6 +2849,11 @@ category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "pygments"
 version = "2.9.0"
@@ -2088,6 +2862,11 @@ category = "dev"
 optional = false
 python-versions = ">=3.5"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "pykerberos"
 version = "1.2.1"
@@ -2095,6 +2874,11 @@ description = "High-level interface to Kerberos"
 category = "dev"
 optional = false
 python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "pyopenssl"
@@ -2112,6 +2896,11 @@ six = ">=1.5.2"
 docs = ["sphinx", "sphinx-rtd-theme"]
 test = ["flaky", "pretend", "pytest (>=3.0.1)"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "pyparsing"
 version = "2.4.7"
@@ -2119,6 +2908,11 @@ description = "Python parsing module"
 category = "main"
 optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "pypydispatcher"
@@ -2128,6 +2922,11 @@ category = "main"
 optional = false
 python-versions = "*"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "pyrsistent"
 version = "0.17.3"
@@ -2135,6 +2934,11 @@ description = "Persistent/Functional/Immutable data structures"
 category = "main"
 optional = false
 python-versions = ">=3.5"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "pytest"
@@ -2158,6 +2962,11 @@ toml = "*"
 [package.extras]
 testing = ["argcomplete", "hypothesis (>=3.56)", "mock", "nose", "requests", "xmlschema"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "pytest-forked"
 version = "1.3.0"
@@ -2169,6 +2978,11 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 [package.dependencies]
 py = "*"
 pytest = ">=3.10"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "pytest-xdist"
@@ -2187,6 +3001,11 @@ pytest-forked = "*"
 psutil = ["psutil (>=3.0)"]
 testing = ["filelock"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "python-dateutil"
 version = "2.8.1"
@@ -2197,6 +3016,11 @@ python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,>=2.7"
 
 [package.dependencies]
 six = ">=1.5"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "pytorch-lightning"
@@ -2214,6 +3038,11 @@ tensorboard = ">=1.14"
 torch = ">=1.3"
 tqdm = ">=4.41.0"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "pytz"
 version = "2021.1"
@@ -2222,16 +3051,10 @@ category = "main"
 optional = false
 python-versions = "*"
 
-[[package]]
-name = "pywavelets"
-version = "1.1.1"
-description = "PyWavelets, wavelet transform module"
-category = "main"
-optional = false
-python-versions = ">=3.5"
-
-[package.dependencies]
-numpy = ">=1.13.3"
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "pywin32"
@@ -2241,6 +3064,11 @@ category = "dev"
 optional = false
 python-versions = "*"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "pywinpty"
 version = "1.1.1"
@@ -2249,6 +3077,11 @@ category = "dev"
 optional = false
 python-versions = ">=3.6"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "pyyaml"
 version = "5.4.1"
@@ -2256,6 +3089,11 @@ description = "YAML parser and emitter for Python"
 category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "pyzmq"
@@ -2268,6 +3106,11 @@ python-versions = ">=3.6"
 [package.dependencies]
 cffi = {version = "*", markers = "implementation_name == \"pypy\""}
 py = {version = "*", markers = "implementation_name == \"pypy\""}
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "qtconsole"
@@ -2291,6 +3134,11 @@ traitlets = "*"
 doc = ["Sphinx (>=1.3)"]
 test = ["flaky", "pytest", "pytest-qt"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "qtpy"
 version = "1.9.0"
@@ -2298,6 +3146,11 @@ description = "Provides an abstraction layer on top of the various Qt bindings (
 category = "dev"
 optional = false
 python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "quantities"
@@ -2307,6 +3160,11 @@ category = "main"
 optional = false
 python-versions = "*"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "queuelib"
 version = "1.6.1"
@@ -2314,6 +3172,11 @@ description = "Collection of persistent (disk-based) and non-persistent (memory-
 category = "main"
 optional = false
 python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "ray"
@@ -2350,6 +3213,11 @@ rllib = ["tabulate", "tensorboardx", "pandas", "atari-py", "dm-tree", "gym", "lz
 serve = ["uvicorn", "flask", "blist", "requests"]
 tune = ["tabulate", "tensorboardx", "pandas"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "redis"
 version = "3.4.1"
@@ -2361,6 +3229,11 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 [package.extras]
 hiredis = ["hiredis (>=0.1.3)"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "regex"
 version = "2021.4.4"
@@ -2368,6 +3241,11 @@ description = "Alternative regular expression module, to replace re."
 category = "main"
 optional = false
 python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "requests"
@@ -2387,6 +3265,11 @@ urllib3 = ">=1.21.1,<1.27"
 security = ["pyOpenSSL (>=0.14)", "cryptography (>=1.3.4)"]
 socks = ["PySocks (>=1.5.6,!=1.5.7)", "win-inet-pton"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "requests-kerberos"
 version = "0.12.0"
@@ -2400,6 +3283,11 @@ cryptography = {version = ">=1.3", markers = "python_version != \"3.3\""}
 pykerberos = {version = ">=1.1.8,<2.0.0", markers = "sys_platform != \"win32\""}
 requests = ">=1.1.0"
 winkerberos = {version = ">=0.5.0", markers = "sys_platform == \"win32\""}
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "requests-oauthlib"
@@ -2416,6 +3304,11 @@ requests = ">=2.0.0"
 [package.extras]
 rsa = ["oauthlib[signedtoken] (>=3.0.0)"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "retrying"
 version = "1.3.3"
@@ -2426,6 +3319,11 @@ python-versions = "*"
 
 [package.dependencies]
 six = ">=1.7.0"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "rsa"
@@ -2438,6 +3336,11 @@ python-versions = ">=3.5, <4"
 [package.dependencies]
 pyasn1 = ">=0.1.3"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "rx"
 version = "1.6.1"
@@ -2445,6 +3348,11 @@ description = "Reactive Extensions (Rx) for Python"
 category = "dev"
 optional = false
 python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "s3fs"
@@ -2457,6 +3365,11 @@ python-versions = ">= 3.5"
 [package.dependencies]
 botocore = ">=1.12.91"
 fsspec = ">=0.6.0"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "s3transfer"
@@ -2472,6 +3385,11 @@ botocore = ">=1.12.36,<2.0a.0"
 [package.extras]
 crt = ["botocore[crt] (>=1.20.29,<2.0a.0)"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "sacremoses"
 version = "0.0.45"
@@ -2486,6 +3404,11 @@ joblib = "*"
 regex = "*"
 six = "*"
 tqdm = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "sagemaker"
@@ -2512,6 +3435,11 @@ local = ["urllib3 (>=1.21.1,!=1.25.0,!=1.25.1,<1.26)", "docker-compose (>=1.25.2
 tensorflow = ["tensorflow (>=1.3.0)"]
 test = ["pandas", "urllib3 (>=1.21.1,!=1.25.0,!=1.25.1,<1.26)", "docker-compose (>=1.25.2)", "PyYAML (>=5.3,<6)", "tensorflow (>=1.3.0)", "tox (==3.15.1)", "flake8", "pytest (==4.6.10)", "pytest-cov", "pytest-rerunfailures", "pytest-xdist", "mock", "contextlib2", "awslogs", "stopit (==1.1.2)", "apache-airflow (==1.10.9)", "fabric (>=2.0)", "requests (>=2.20.0,<3)", "black (==19.10b0)"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "scikit-image"
 version = "0.16.2"
@@ -2520,18 +3448,10 @@ category = "main"
 optional = false
 python-versions = ">=3.6"
 
-[package.dependencies]
-imageio = ">=2.3.0"
-matplotlib = ">=2.0.0,<3.0.0 || >3.0.0"
-networkx = ">=2.0"
-pillow = ">=4.3.0"
-PyWavelets = ">=0.4.0"
-scipy = ">=0.19.0"
-
-[package.extras]
-docs = ["sphinx (>=1.3,!=1.7.8)", "numpydoc (>=0.9)", "sphinx-gallery", "sphinx-copybutton", "pytest-runner", "scikit-learn", "matplotlib (>=3.0.1)", "dask[array] (>=0.15.0)", "cloudpickle (>=0.2.1)"]
-optional = ["simpleitk", "astropy (>=1.2.0)", "tifffile", "qtpy", "pyamg", "dask[array] (>=0.15.0)", "cloudpickle (>=0.2.1)"]
-test = ["pytest (!=3.7.3)", "pytest-cov", "pytest-localserver", "flake8", "codecov"]
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "scikit-learn"
@@ -2546,8 +3466,10 @@ joblib = ">=0.11"
 numpy = ">=1.11.0"
 scipy = ">=0.17.0"
 
-[package.extras]
-alldeps = ["numpy (>=1.11.0)", "scipy (>=0.17.0)"]
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "scipy"
@@ -2559,6 +3481,11 @@ python-versions = ">=3.7,<3.10"
 
 [package.dependencies]
 numpy = ">=1.16.5,<1.23.0"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "scrapy"
@@ -2584,6 +3511,11 @@ Twisted = {version = ">=17.9.0", markers = "python_version >= \"3.5\""}
 w3lib = ">=1.17.0"
 "zope.interface" = ">=4.1.3"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "semantic"
 version = "1.0.3"
@@ -2596,6 +3528,11 @@ python-versions = "*"
 numpy = "*"
 quantities = "*"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "send2trash"
 version = "1.5.0"
@@ -2604,6 +3541,11 @@ category = "dev"
 optional = false
 python-versions = "*"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "sentencepiece"
 version = "0.1.91"
@@ -2611,6 +3553,11 @@ description = "SentencePiece python wrapper"
 category = "main"
 optional = false
 python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "service-identity"
@@ -2633,6 +3580,11 @@ docs = ["sphinx", "furo"]
 idna = ["idna"]
 tests = ["coverage[toml] (>=5.0.2)", "pytest"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "six"
 version = "1.16.0"
@@ -2640,6 +3592,11 @@ description = "Python 2 and 3 compatibility utilities"
 category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "smart-open"
@@ -2658,6 +3615,11 @@ s3 = ["boto3"]
 test = ["boto3", "google-cloud-storage", "azure-storage-blob", "azure-common", "azure-core", "requests", "moto[server] (==1.3.14)", "pathlib2", "responses", "paramiko", "parameterizedtestcase", "pytest", "pytest-rerunfailures"]
 webhdfs = ["requests"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "smdebug-rulesconfig"
 version = "0.1.4"
@@ -2665,6 +3627,11 @@ description = "SMDebug RulesConfig"
 category = "main"
 optional = false
 python-versions = ">=2.7"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "sortedcontainers"
@@ -2674,6 +3641,11 @@ category = "main"
 optional = false
 python-versions = "*"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "soupsieve"
 version = "2.2.1"
@@ -2682,13 +3654,18 @@ category = "main"
 optional = false
 python-versions = ">=3.6"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "spacy"
 version = "2.2.3"
 description = "Industrial-strength Natural Language Processing (NLP) in Python"
 category = "main"
 optional = false
-python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,>=2.7"
+python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*"
 
 [package.dependencies]
 blis = ">=0.4.0,<0.5.0"
@@ -2712,8 +3689,13 @@ cuda91 = ["cupy-cuda91 (>=5.0.0b4)"]
 cuda92 = ["cupy-cuda92 (>=5.0.0b4)"]
 ja = ["mecab-python3 (==0.7)"]
 ko = ["natto-py (==0.9.0)"]
-lookups = ["spacy-lookups-data (>=0.0.5)"]
+lookups = ["spacy_lookups_data (>=0.0.5)"]
 th = ["pythainlp (>=2.0)"]
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "sparkmagic"
@@ -2738,6 +3720,11 @@ requests = "*"
 requests-kerberos = ">=0.8.0"
 tornado = ">=4"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "srsly"
 version = "1.0.5"
@@ -2745,6 +3732,11 @@ description = "Modern high-performance serialization utilities for Python"
 category = "main"
 optional = false
 python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "tabulate"
@@ -2756,6 +3748,11 @@ python-versions = "*"
 
 [package.extras]
 widechars = ["wcwidth"]
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "tensorboard"
@@ -2778,6 +3775,11 @@ tensorboard-data-server = ">=0.6.0,<0.7.0"
 tensorboard-plugin-wit = ">=1.6.0"
 werkzeug = ">=0.11.15"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "tensorboard-data-server"
 version = "0.6.1"
@@ -2786,6 +3788,11 @@ category = "main"
 optional = false
 python-versions = ">=3.6"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "tensorboard-plugin-wit"
 version = "1.8.0"
@@ -2793,6 +3800,11 @@ description = "What-If Tool TensorBoard plugin."
 category = "main"
 optional = false
 python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "terminado"
@@ -2810,6 +3822,11 @@ tornado = ">=4"
 [package.extras]
 test = ["pytest"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "testpath"
 version = "0.5.0"
@@ -2820,6 +3837,11 @@ python-versions = ">= 3.5"
 
 [package.extras]
 test = ["pytest", "pathlib2"]
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "thinc"
@@ -2849,6 +3871,11 @@ cuda90 = ["cupy-cuda90 (>=5.0.0b4)"]
 cuda91 = ["cupy-cuda91 (>=5.0.0b4)"]
 cuda92 = ["cupy-cuda92 (>=5.0.0b4)"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "tokenizers"
 version = "0.8.1rc2"
@@ -2860,6 +3887,11 @@ python-versions = "*"
 [package.extras]
 testing = ["pytest"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "toml"
 version = "0.10.2"
@@ -2867,6 +3899,11 @@ description = "Python Library for Tom's Obvious, Minimal Language"
 category = "dev"
 optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "torch"
@@ -2879,6 +3916,11 @@ python-versions = ">=3.6.1"
 [package.dependencies]
 future = "*"
 numpy = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "torchvision"
@@ -2896,6 +3938,11 @@ torch = "1.6.0"
 [package.extras]
 scipy = ["scipy"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "tornado"
 version = "6.1"
@@ -2903,6 +3950,11 @@ description = "Tornado is a Python web framework and asynchronous networking lib
 category = "dev"
 optional = false
 python-versions = ">= 3.5"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "tqdm"
@@ -2917,6 +3969,11 @@ dev = ["py-make (>=0.1.0)", "twine", "wheel"]
 notebook = ["ipywidgets (>=6)"]
 telegram = ["requests"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "traitlets"
 version = "5.0.5"
@@ -2930,6 +3987,11 @@ ipython-genutils = "*"
 
 [package.extras]
 test = ["pytest"]
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "transformers"
@@ -2964,6 +4026,11 @@ tf = ["tensorflow (>=2.0)", "onnxconverter-common", "keras2onnx"]
 tf-cpu = ["tensorflow-cpu (>=2.0)", "onnxconverter-common", "keras2onnx"]
 torch = ["torch (>=1.0)"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "twisted"
 version = "21.2.0"
@@ -2995,6 +4062,11 @@ test = ["cython-test-exception-raiser (>=1.0,<2.0)", "PyHamcrest (>=1.9.0)"]
 tls = ["pyopenssl (>=16.0.0)", "service-identity (>=18.1.0)", "idna (>=2.4)"]
 windows_platform = ["pywin32 (!=226)", "cython-test-exception-raiser (>=1.0,<2.0)", "PyHamcrest (>=1.9.0)", "pyopenssl (>=16.0.0)", "service-identity (>=18.1.0)", "idna (>=2.4)", "pyasn1", "cryptography (>=2.6)", "appdirs (>=1.4.0)", "bcrypt (>=3.0.0)", "pyserial (>=3.0)", "h2 (>=3.0,<4.0)", "priority (>=1.1.0,<2.0)", "pywin32 (!=226)", "contextvars (>=2.4,<3)"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "twisted-iocpsupport"
 version = "1.0.1"
@@ -3003,6 +4075,11 @@ category = "main"
 optional = false
 python-versions = "*"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "typing-extensions"
 version = "3.10.0.0"
@@ -3010,6 +4087,11 @@ description = "Backported and Experimental Type Hints for Python 3.5+"
 category = "main"
 optional = false
 python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "urllib3"
@@ -3024,6 +4106,11 @@ brotli = ["brotlipy (>=0.6.0)"]
 secure = ["pyOpenSSL (>=0.14)", "cryptography (>=1.3.4)", "idna (>=2.0.0)", "certifi", "ipaddress"]
 socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "w3lib"
 version = "1.22.0"
@@ -3035,6 +4122,11 @@ python-versions = "*"
 [package.dependencies]
 six = ">=1.4.1"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "wasabi"
 version = "0.8.2"
@@ -3042,6 +4134,11 @@ description = "A lightweight console printing and formatting toolkit"
 category = "main"
 optional = false
 python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "wcwidth"
@@ -3051,6 +4148,11 @@ category = "dev"
 optional = false
 python-versions = "*"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "webencodings"
 version = "0.5.1"
@@ -3058,6 +4160,11 @@ description = "Character encoding aliases for legacy web content"
 category = "dev"
 optional = false
 python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "werkzeug"
@@ -3071,6 +4178,11 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 dev = ["pytest", "pytest-timeout", "coverage", "tox", "sphinx", "pallets-sphinx-themes", "sphinx-issues"]
 watchdog = ["watchdog"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "widgetsnbextension"
 version = "3.5.1"
@@ -3082,6 +4194,11 @@ python-versions = "*"
 [package.dependencies]
 notebook = ">=4.4.1"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "winkerberos"
 version = "0.8.0"
@@ -3089,6 +4206,11 @@ description = "High level interface to SSPI for Kerberos client auth"
 category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "xlrd"
@@ -3098,6 +4220,11 @@ category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [[package]]
 name = "xlsxwriter"
 version = "1.4.3"
@@ -3105,6 +4232,11 @@ description = "A Python module for creating Excel XLSX files."
 category = "main"
 optional = false
 python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "yarl"
@@ -3117,7 +4249,12 @@ python-versions = ">=3.6"
 [package.dependencies]
 idna = ">=2.0"
 multidict = ">=4.0"
-typing-extensions = {version = ">=3.7.4", markers = "python_version < \"3.8\""}
+typing_extensions = {version = ">=3.7.4", markers = "python_version < \"3.8\""}
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "zipp"
@@ -3130,6 +4267,11 @@ python-versions = ">=3.6"
 [package.extras]
 docs = ["sphinx", "jaraco.packaging (>=8.2)", "rst.linker (>=1.9)"]
 testing = ["pytest (>=4.6)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pytest-cov", "pytest-enabler", "jaraco.itertools", "func-timeout", "pytest-black (>=0.3.7)", "pytest-mypy"]
+
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
 
 [[package]]
 name = "zope.interface"
@@ -3144,10 +4286,15 @@ docs = ["sphinx", "repoze.sphinx.autointerface"]
 test = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 testing = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 
+[package.source]
+type = "legacy"
+url = "https://oaknorth-264571470104.d.codeartifact.eu-west-1.amazonaws.com/pypi/python/simple"
+reference = "oaknorth-read-only"
+
 [metadata]
 lock-version = "1.1"
 python-versions = "~3.7.3"
-content-hash = "9e09db3c700c9aa1ff88e3df4d5974b3702bbe010602e90ce62a0faeb2e1a630"
+content-hash = "6d681737a43d0066d219dbb30aa3a86ed61832d416b95a77d5da0ba1ca96cab5"
 
 [metadata.files]
 absl-py = [
@@ -3233,12 +4380,6 @@ argon2-cffi = [
     {file = "argon2_cffi-20.1.0-cp37-cp37m-win_amd64.whl", hash = "sha256:6678bb047373f52bcff02db8afab0d2a77d83bde61cfecea7c5c62e2335cb203"},
     {file = "argon2_cffi-20.1.0-cp38-cp38-win32.whl", hash = "sha256:77e909cc756ef81d6abb60524d259d959bab384832f0c651ed7dcb6e5ccdbb78"},
     {file = "argon2_cffi-20.1.0-cp38-cp38-win_amd64.whl", hash = "sha256:9dfd5197852530294ecb5795c97a823839258dfd5eb9420233c7cfedec2058f2"},
-    {file = "argon2_cffi-20.1.0-cp39-cp39-win32.whl", hash = "sha256:e2db6e85c057c16d0bd3b4d2b04f270a7467c147381e8fd73cbbe5bc719832be"},
-    {file = "argon2_cffi-20.1.0-cp39-cp39-win_amd64.whl", hash = "sha256:8a84934bd818e14a17943de8099d41160da4a336bcc699bb4c394bbb9b94bd32"},
-    {file = "argon2_cffi-20.1.0-pp36-pypy36_pp73-macosx_10_7_x86_64.whl", hash = "sha256:b94042e5dcaa5d08cf104a54bfae614be502c6f44c9c89ad1535b2ebdaacbd4c"},
-    {file = "argon2_cffi-20.1.0-pp36-pypy36_pp73-win32.whl", hash = "sha256:8282b84ceb46b5b75c3a882b28856b8cd7e647ac71995e71b6705ec06fc232c3"},
-    {file = "argon2_cffi-20.1.0-pp37-pypy37_pp73-macosx_10_7_x86_64.whl", hash = "sha256:3aa804c0e52f208973845e8b10c70d8957c9e5a666f702793256242e9167c4e0"},
-    {file = "argon2_cffi-20.1.0-pp37-pypy37_pp73-win_amd64.whl", hash = "sha256:36320372133a003374ef4275fbfce78b7ab581440dfca9f9471be3dd9a522428"},
 ]
 async-generator = [
     {file = "async_generator-1.10-py3-none-any.whl", hash = "sha256:01c7bf666359b4967d2cda0000cc2e4af16a0ae098cbffcb8472fb9e8ad6585b"},
@@ -3353,36 +4494,24 @@ cffi = [
     {file = "cffi-1.14.5-cp36-cp36m-manylinux1_i686.whl", hash = "sha256:48e1c69bbacfc3d932221851b39d49e81567a4d4aac3b21258d9c24578280058"},
     {file = "cffi-1.14.5-cp36-cp36m-manylinux1_x86_64.whl", hash = "sha256:69e395c24fc60aad6bb4fa7e583698ea6cc684648e1ffb7fe85e3c1ca131a7d5"},
     {file = "cffi-1.14.5-cp36-cp36m-manylinux2014_aarch64.whl", hash = "sha256:9e93e79c2551ff263400e1e4be085a1210e12073a31c2011dbbda14bda0c6132"},
-    {file = "cffi-1.14.5-cp36-cp36m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:24ec4ff2c5c0c8f9c6b87d5bb53555bf267e1e6f70e52e5a9740d32861d36b6f"},
-    {file = "cffi-1.14.5-cp36-cp36m-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:3c3f39fa737542161d8b0d680df2ec249334cd70a8f420f71c9304bd83c3cbed"},
-    {file = "cffi-1.14.5-cp36-cp36m-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:681d07b0d1e3c462dd15585ef5e33cb021321588bebd910124ef4f4fb71aef55"},
     {file = "cffi-1.14.5-cp36-cp36m-win32.whl", hash = "sha256:58e3f59d583d413809d60779492342801d6e82fefb89c86a38e040c16883be53"},
     {file = "cffi-1.14.5-cp36-cp36m-win_amd64.whl", hash = "sha256:005a36f41773e148deac64b08f233873a4d0c18b053d37da83f6af4d9087b813"},
     {file = "cffi-1.14.5-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:2894f2df484ff56d717bead0a5c2abb6b9d2bf26d6960c4604d5c48bbc30ee73"},
     {file = "cffi-1.14.5-cp37-cp37m-manylinux1_i686.whl", hash = "sha256:0857f0ae312d855239a55c81ef453ee8fd24136eaba8e87a2eceba644c0d4c06"},
     {file = "cffi-1.14.5-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:cd2868886d547469123fadc46eac7ea5253ea7fcb139f12e1dfc2bbd406427d1"},
     {file = "cffi-1.14.5-cp37-cp37m-manylinux2014_aarch64.whl", hash = "sha256:35f27e6eb43380fa080dccf676dece30bef72e4a67617ffda586641cd4508d49"},
-    {file = "cffi-1.14.5-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:06d7cd1abac2ffd92e65c0609661866709b4b2d82dd15f611e602b9b188b0b69"},
-    {file = "cffi-1.14.5-cp37-cp37m-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:0f861a89e0043afec2a51fd177a567005847973be86f709bbb044d7f42fc4e05"},
-    {file = "cffi-1.14.5-cp37-cp37m-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:cc5a8e069b9ebfa22e26d0e6b97d6f9781302fe7f4f2b8776c3e1daea35f1adc"},
     {file = "cffi-1.14.5-cp37-cp37m-win32.whl", hash = "sha256:9ff227395193126d82e60319a673a037d5de84633f11279e336f9c0f189ecc62"},
     {file = "cffi-1.14.5-cp37-cp37m-win_amd64.whl", hash = "sha256:9cf8022fb8d07a97c178b02327b284521c7708d7c71a9c9c355c178ac4bbd3d4"},
     {file = "cffi-1.14.5-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:8b198cec6c72df5289c05b05b8b0969819783f9418e0409865dac47288d2a053"},
     {file = "cffi-1.14.5-cp38-cp38-manylinux1_i686.whl", hash = "sha256:ad17025d226ee5beec591b52800c11680fca3df50b8b29fe51d882576e039ee0"},
     {file = "cffi-1.14.5-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:6c97d7350133666fbb5cf4abdc1178c812cb205dc6f41d174a7b0f18fb93337e"},
     {file = "cffi-1.14.5-cp38-cp38-manylinux2014_aarch64.whl", hash = "sha256:8ae6299f6c68de06f136f1f9e69458eae58f1dacf10af5c17353eae03aa0d827"},
-    {file = "cffi-1.14.5-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:04c468b622ed31d408fea2346bec5bbffba2cc44226302a0de1ade9f5ea3d373"},
-    {file = "cffi-1.14.5-cp38-cp38-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:06db6321b7a68b2bd6df96d08a5adadc1fa0e8f419226e25b2a5fbf6ccc7350f"},
-    {file = "cffi-1.14.5-cp38-cp38-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:293e7ea41280cb28c6fcaaa0b1aa1f533b8ce060b9e701d78511e1e6c4a1de76"},
     {file = "cffi-1.14.5-cp38-cp38-win32.whl", hash = "sha256:b85eb46a81787c50650f2392b9b4ef23e1f126313b9e0e9013b35c15e4288e2e"},
     {file = "cffi-1.14.5-cp38-cp38-win_amd64.whl", hash = "sha256:1f436816fc868b098b0d63b8920de7d208c90a67212546d02f84fe78a9c26396"},
     {file = "cffi-1.14.5-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:1071534bbbf8cbb31b498d5d9db0f274f2f7a865adca4ae429e147ba40f73dea"},
     {file = "cffi-1.14.5-cp39-cp39-manylinux1_i686.whl", hash = "sha256:9de2e279153a443c656f2defd67769e6d1e4163952b3c622dcea5b08a6405322"},
     {file = "cffi-1.14.5-cp39-cp39-manylinux1_x86_64.whl", hash = "sha256:6e4714cc64f474e4d6e37cfff31a814b509a35cb17de4fb1999907575684479c"},
     {file = "cffi-1.14.5-cp39-cp39-manylinux2014_aarch64.whl", hash = "sha256:158d0d15119b4b7ff6b926536763dc0714313aa59e320ddf787502c70c4d4bee"},
-    {file = "cffi-1.14.5-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:1bf1ac1984eaa7675ca8d5745a8cb87ef7abecb5592178406e55858d411eadc0"},
-    {file = "cffi-1.14.5-cp39-cp39-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:df5052c5d867c1ea0b311fb7c3cd28b19df469c056f7fdcfe88c7473aa63e333"},
-    {file = "cffi-1.14.5-cp39-cp39-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:24a570cd11895b60829e941f2613a4f79df1a27344cbbb82164ef2e0116f09c7"},
     {file = "cffi-1.14.5-cp39-cp39-win32.whl", hash = "sha256:afb29c1ba2e5a3736f1c301d9d0abe3ec8b86957d04ddfa9d7a6a42b9367e396"},
     {file = "cffi-1.14.5-cp39-cp39-win_amd64.whl", hash = "sha256:f2d45f97ab6bb54753eab54fffe75aaf3de4ff2341c9daee1987ee1837636f1d"},
     {file = "cffi-1.14.5.tar.gz", hash = "sha256:fd78e5fee591709f32ef6edb9a015b4aa1a5022598e36227500c8f4e02328d9c"},
@@ -3424,10 +4553,6 @@ cryptography = [
 cssselect = [
     {file = "cssselect-1.1.0-py2.py3-none-any.whl", hash = "sha256:f612ee47b749c877ebae5bb77035d8f4202c6ad0f0fc1271b3c18ad6c4468ecf"},
     {file = "cssselect-1.1.0.tar.gz", hash = "sha256:f95f8dedd925fd8f54edb3d2dfb44c190d9d18512377d3c1e2388d16126879bc"},
-]
-cycler = [
-    {file = "cycler-0.10.0-py2.py3-none-any.whl", hash = "sha256:1d8a5ae1ff6c5cf9b93e8811e581232ad8920aeec647c37316ceac982b08cb2d"},
-    {file = "cycler-0.10.0.tar.gz", hash = "sha256:cd7b2d1018258d7247a71425e9f26463dfb444d411c39569972f4ce586b0c9d8"},
 ]
 cymem = [
     {file = "cymem-2.0.5-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:9d72d69f7a62a280199c3aa7bc550685c47d6d0689b2d299e6492253b86d2437"},
@@ -3485,6 +4610,20 @@ decorator = [
 defusedxml = [
     {file = "defusedxml-0.7.1-py2.py3-none-any.whl", hash = "sha256:a352e7e428770286cc899e2542b6cdaedb2b4953ff269a210103ec58f6198a61"},
     {file = "defusedxml-0.7.1.tar.gz", hash = "sha256:1bb3032db185915b62d7c6209c5a8792be6a32ab2fedacc84e01b52c51aa3e69"},
+]
+dgl = [
+    {file = "dgl-0.6.1-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:5c71268a934fe8c40634bba728fd9567b7ea8bda8275d9dcee88931f855c86b0"},
+    {file = "dgl-0.6.1-cp36-cp36m-manylinux1_x86_64.whl", hash = "sha256:2cfd4c346aa72e986b06a8b0f9e947bb9304fcf95073da1bc40e0d4c9c66c8d1"},
+    {file = "dgl-0.6.1-cp36-cp36m-win_amd64.whl", hash = "sha256:131e63f97d96d983d1141363fb3bf2d7a60cca108e8de56f679e729835df0a9f"},
+    {file = "dgl-0.6.1-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:3b4242e5c17f6427205567b2e69fdd232fd9c540d42742149cb812ca4a23c065"},
+    {file = "dgl-0.6.1-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:5437f101d1995723f1b03bca27dbf6e5510ba0b6031c87c43bc3f95c20d3ce7b"},
+    {file = "dgl-0.6.1-cp37-cp37m-win_amd64.whl", hash = "sha256:09eb899bdcced716406a8071149ad61e057cc8b556f99ecd16b372ba030fccab"},
+    {file = "dgl-0.6.1-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:90ca71ac2fdfe3b8ae0f498348ed5d23a3ef7c4f41e7496c3a2b9f63c78aec8f"},
+    {file = "dgl-0.6.1-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:6764dc0eb0e27954ec245c20bbffad7eb7c89459285d40ab96c6f0a2853d9b8c"},
+    {file = "dgl-0.6.1-cp38-cp38-win_amd64.whl", hash = "sha256:a131b50c9c122bf66c6ce1382c073512bd39646fc8d5d30c958becad1e21a19a"},
+    {file = "dgl-0.6.1-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:6593c7f604477186a4e7e0abc986dcdd62ef97b256062bce22b348db5eb57d1e"},
+    {file = "dgl-0.6.1-cp39-cp39-manylinux1_x86_64.whl", hash = "sha256:1777c27541c501962567d292e2b0b323724af50e542a24aac4260f6729d44e94"},
+    {file = "dgl-0.6.1-cp39-cp39-win_amd64.whl", hash = "sha256:b8561cf366db2bee9f27059407d611d436e3001fb7e8ec7b20626b853f3f085b"},
 ]
 docutils = [
     {file = "docutils-0.15.2-py2-none-any.whl", hash = "sha256:9e4d7ecfc600058e07ba661411a2b7de2fd0fafa17d1a7f7361cd47b1175c827"},
@@ -3773,10 +4912,6 @@ idna = [
     {file = "idna-2.10-py2.py3-none-any.whl", hash = "sha256:b97d804b1e9b523befed77c48dacec60e6dcb0b5391d57af6a65a312a90648c0"},
     {file = "idna-2.10.tar.gz", hash = "sha256:b307872f855b18632ce0c21c5e45be78c0ea7ae4c15c828c20788b26921eb3f6"},
 ]
-imageio = [
-    {file = "imageio-2.9.0-py3-none-any.whl", hash = "sha256:3604d751f03002e8e0e7650aa71d8d9148144a87daf17cb1f3228e80747f2e6b"},
-    {file = "imageio-2.9.0.tar.gz", hash = "sha256:52ddbaeca2dccf53ba2d6dec5676ca7bc3b2403ef8b37f7da78b7654bb3e10f0"},
-]
 importlib-metadata = [
     {file = "importlib_metadata-4.5.0-py3-none-any.whl", hash = "sha256:833b26fb89d5de469b24a390e9df088d4e52e4ba33b01dc5e0e4f41b81a16c00"},
     {file = "importlib_metadata-4.5.0.tar.gz", hash = "sha256:b142cc1dd1342f31ff04bb7d022492b09920cb64fed867cd3ea6f80fe3ebd139"},
@@ -3862,40 +4997,6 @@ jupyterlab-widgets = [
     {file = "jupyterlab_widgets-1.0.0-py3-none-any.whl", hash = "sha256:caeaf3e6103180e654e7d8d2b81b7d645e59e432487c1d35a41d6d3ee56b3fef"},
     {file = "jupyterlab_widgets-1.0.0.tar.gz", hash = "sha256:5c1a29a84d3069208cb506b10609175b249b6486d6b1cbae8fcde2a11584fb78"},
 ]
-kiwisolver = [
-    {file = "kiwisolver-1.3.1-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:fd34fbbfbc40628200730bc1febe30631347103fc8d3d4fa012c21ab9c11eca9"},
-    {file = "kiwisolver-1.3.1-cp36-cp36m-manylinux1_i686.whl", hash = "sha256:d3155d828dec1d43283bd24d3d3e0d9c7c350cdfcc0bd06c0ad1209c1bbc36d0"},
-    {file = "kiwisolver-1.3.1-cp36-cp36m-manylinux1_x86_64.whl", hash = "sha256:5a7a7dbff17e66fac9142ae2ecafb719393aaee6a3768c9de2fd425c63b53e21"},
-    {file = "kiwisolver-1.3.1-cp36-cp36m-manylinux2014_aarch64.whl", hash = "sha256:f8d6f8db88049a699817fd9178782867bf22283e3813064302ac59f61d95be05"},
-    {file = "kiwisolver-1.3.1-cp36-cp36m-manylinux2014_ppc64le.whl", hash = "sha256:5f6ccd3dd0b9739edcf407514016108e2280769c73a85b9e59aa390046dbf08b"},
-    {file = "kiwisolver-1.3.1-cp36-cp36m-win32.whl", hash = "sha256:225e2e18f271e0ed8157d7f4518ffbf99b9450fca398d561eb5c4a87d0986dd9"},
-    {file = "kiwisolver-1.3.1-cp36-cp36m-win_amd64.whl", hash = "sha256:cf8b574c7b9aa060c62116d4181f3a1a4e821b2ec5cbfe3775809474113748d4"},
-    {file = "kiwisolver-1.3.1-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:232c9e11fd7ac3a470d65cd67e4359eee155ec57e822e5220322d7b2ac84fbf0"},
-    {file = "kiwisolver-1.3.1-cp37-cp37m-manylinux1_i686.whl", hash = "sha256:b38694dcdac990a743aa654037ff1188c7a9801ac3ccc548d3341014bc5ca278"},
-    {file = "kiwisolver-1.3.1-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:ca3820eb7f7faf7f0aa88de0e54681bddcb46e485beb844fcecbcd1c8bd01689"},
-    {file = "kiwisolver-1.3.1-cp37-cp37m-manylinux2014_aarch64.whl", hash = "sha256:c8fd0f1ae9d92b42854b2979024d7597685ce4ada367172ed7c09edf2cef9cb8"},
-    {file = "kiwisolver-1.3.1-cp37-cp37m-manylinux2014_ppc64le.whl", hash = "sha256:1e1bc12fb773a7b2ffdeb8380609f4f8064777877b2225dec3da711b421fda31"},
-    {file = "kiwisolver-1.3.1-cp37-cp37m-win32.whl", hash = "sha256:72c99e39d005b793fb7d3d4e660aed6b6281b502e8c1eaf8ee8346023c8e03bc"},
-    {file = "kiwisolver-1.3.1-cp37-cp37m-win_amd64.whl", hash = "sha256:8be8d84b7d4f2ba4ffff3665bcd0211318aa632395a1a41553250484a871d454"},
-    {file = "kiwisolver-1.3.1-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:31dfd2ac56edc0ff9ac295193eeaea1c0c923c0355bf948fbd99ed6018010b72"},
-    {file = "kiwisolver-1.3.1-cp38-cp38-manylinux1_i686.whl", hash = "sha256:563c649cfdef27d081c84e72a03b48ea9408c16657500c312575ae9d9f7bc1c3"},
-    {file = "kiwisolver-1.3.1-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:78751b33595f7f9511952e7e60ce858c6d64db2e062afb325985ddbd34b5c131"},
-    {file = "kiwisolver-1.3.1-cp38-cp38-manylinux2014_aarch64.whl", hash = "sha256:a357fd4f15ee49b4a98b44ec23a34a95f1e00292a139d6015c11f55774ef10de"},
-    {file = "kiwisolver-1.3.1-cp38-cp38-manylinux2014_ppc64le.whl", hash = "sha256:5989db3b3b34b76c09253deeaf7fbc2707616f130e166996606c284395da3f18"},
-    {file = "kiwisolver-1.3.1-cp38-cp38-win32.whl", hash = "sha256:c08e95114951dc2090c4a630c2385bef681cacf12636fb0241accdc6b303fd81"},
-    {file = "kiwisolver-1.3.1-cp38-cp38-win_amd64.whl", hash = "sha256:44a62e24d9b01ba94ae7a4a6c3fb215dc4af1dde817e7498d901e229aaf50e4e"},
-    {file = "kiwisolver-1.3.1-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:50af681a36b2a1dee1d3c169ade9fdc59207d3c31e522519181e12f1b3ba7000"},
-    {file = "kiwisolver-1.3.1-cp39-cp39-manylinux1_i686.whl", hash = "sha256:a53d27d0c2a0ebd07e395e56a1fbdf75ffedc4a05943daf472af163413ce9598"},
-    {file = "kiwisolver-1.3.1-cp39-cp39-manylinux1_x86_64.whl", hash = "sha256:834ee27348c4aefc20b479335fd422a2c69db55f7d9ab61721ac8cd83eb78882"},
-    {file = "kiwisolver-1.3.1-cp39-cp39-manylinux2014_aarch64.whl", hash = "sha256:5c3e6455341008a054cccee8c5d24481bcfe1acdbc9add30aa95798e95c65621"},
-    {file = "kiwisolver-1.3.1-cp39-cp39-manylinux2014_ppc64le.whl", hash = "sha256:acef3d59d47dd85ecf909c359d0fd2c81ed33bdff70216d3956b463e12c38a54"},
-    {file = "kiwisolver-1.3.1-cp39-cp39-win32.whl", hash = "sha256:c5518d51a0735b1e6cee1fdce66359f8d2b59c3ca85dc2b0813a8aa86818a030"},
-    {file = "kiwisolver-1.3.1-cp39-cp39-win_amd64.whl", hash = "sha256:b9edd0110a77fc321ab090aaa1cfcaba1d8499850a12848b81be2222eab648f6"},
-    {file = "kiwisolver-1.3.1-pp36-pypy36_pp73-macosx_10_9_x86_64.whl", hash = "sha256:0cd53f403202159b44528498de18f9285b04482bab2a6fc3f5dd8dbb9352e30d"},
-    {file = "kiwisolver-1.3.1-pp36-pypy36_pp73-manylinux2010_x86_64.whl", hash = "sha256:33449715e0101e4d34f64990352bce4095c8bf13bed1b390773fc0a7295967b3"},
-    {file = "kiwisolver-1.3.1-pp36-pypy36_pp73-win32.whl", hash = "sha256:401a2e9afa8588589775fe34fc22d918ae839aaaf0c0e96441c0fdbce6d8ebe6"},
-    {file = "kiwisolver-1.3.1.tar.gz", hash = "sha256:950a199911a8d94683a6b10321f9345d5a3a8433ec58b217ace979e18f16e248"},
-]
 krippendorff = [
     {file = "krippendorff-0.3.3-py3-none-any.whl", hash = "sha256:a8aab6766e1b996610c886be3f86aca6e29c7420f181acaf381c8c7cb77029ae"},
     {file = "krippendorff-0.3.3.tar.gz", hash = "sha256:dcb4b92af4b535b189daaa064e3f9c1714943d4709b68e0dfa1d532aef49e22d"},
@@ -3912,45 +5013,32 @@ lxml = [
     {file = "lxml-4.6.3-cp27-cp27m-win_amd64.whl", hash = "sha256:8157dadbb09a34a6bd95a50690595e1fa0af1a99445e2744110e3dca7831c4ee"},
     {file = "lxml-4.6.3-cp27-cp27mu-manylinux1_i686.whl", hash = "sha256:7728e05c35412ba36d3e9795ae8995e3c86958179c9770e65558ec3fdfd3724f"},
     {file = "lxml-4.6.3-cp27-cp27mu-manylinux1_x86_64.whl", hash = "sha256:4bff24dfeea62f2e56f5bab929b4428ae6caba2d1eea0c2d6eb618e30a71e6d4"},
-    {file = "lxml-4.6.3-cp35-cp35m-manylinux1_i686.whl", hash = "sha256:74f7d8d439b18fa4c385f3f5dfd11144bb87c1da034a466c5b5577d23a1d9b51"},
-    {file = "lxml-4.6.3-cp35-cp35m-manylinux1_x86_64.whl", hash = "sha256:f90ba11136bfdd25cae3951af8da2e95121c9b9b93727b1b896e3fa105b2f586"},
-    {file = "lxml-4.6.3-cp35-cp35m-manylinux2010_i686.whl", hash = "sha256:4c61b3a0db43a1607d6264166b230438f85bfed02e8cff20c22e564d0faff354"},
-    {file = "lxml-4.6.3-cp35-cp35m-manylinux2014_x86_64.whl", hash = "sha256:5c8c163396cc0df3fd151b927e74f6e4acd67160d6c33304e805b84293351d16"},
     {file = "lxml-4.6.3-cp35-cp35m-win32.whl", hash = "sha256:f2380a6376dfa090227b663f9678150ef27543483055cc327555fb592c5967e2"},
     {file = "lxml-4.6.3-cp35-cp35m-win_amd64.whl", hash = "sha256:c4f05c5a7c49d2fb70223d0d5bcfbe474cf928310ac9fa6a7c6dddc831d0b1d4"},
     {file = "lxml-4.6.3-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:d2e35d7bf1c1ac8c538f88d26b396e73dd81440d59c1ef8522e1ea77b345ede4"},
     {file = "lxml-4.6.3-cp36-cp36m-manylinux1_i686.whl", hash = "sha256:289e9ca1a9287f08daaf796d96e06cb2bc2958891d7911ac7cae1c5f9e1e0ee3"},
     {file = "lxml-4.6.3-cp36-cp36m-manylinux1_x86_64.whl", hash = "sha256:bccbfc27563652de7dc9bdc595cb25e90b59c5f8e23e806ed0fd623755b6565d"},
-    {file = "lxml-4.6.3-cp36-cp36m-manylinux2010_i686.whl", hash = "sha256:d916d31fd85b2f78c76400d625076d9124de3e4bda8b016d25a050cc7d603f24"},
     {file = "lxml-4.6.3-cp36-cp36m-manylinux2014_aarch64.whl", hash = "sha256:820628b7b3135403540202e60551e741f9b6d3304371712521be939470b454ec"},
-    {file = "lxml-4.6.3-cp36-cp36m-manylinux2014_x86_64.whl", hash = "sha256:c47ff7e0a36d4efac9fd692cfa33fbd0636674c102e9e8d9b26e1b93a94e7617"},
     {file = "lxml-4.6.3-cp36-cp36m-win32.whl", hash = "sha256:5a0a14e264069c03e46f926be0d8919f4105c1623d620e7ec0e612a2e9bf1c04"},
     {file = "lxml-4.6.3-cp36-cp36m-win_amd64.whl", hash = "sha256:92e821e43ad382332eade6812e298dc9701c75fe289f2a2d39c7960b43d1e92a"},
     {file = "lxml-4.6.3-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:efd7a09678fd8b53117f6bae4fa3825e0a22b03ef0a932e070c0bdbb3a35e654"},
     {file = "lxml-4.6.3-cp37-cp37m-manylinux1_i686.whl", hash = "sha256:efac139c3f0bf4f0939f9375af4b02c5ad83a622de52d6dfa8e438e8e01d0eb0"},
     {file = "lxml-4.6.3-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:0fbcf5565ac01dff87cbfc0ff323515c823081c5777a9fc7703ff58388c258c3"},
-    {file = "lxml-4.6.3-cp37-cp37m-manylinux2010_i686.whl", hash = "sha256:36108c73739985979bf302006527cf8a20515ce444ba916281d1c43938b8bb96"},
     {file = "lxml-4.6.3-cp37-cp37m-manylinux2014_aarch64.whl", hash = "sha256:122fba10466c7bd4178b07dba427aa516286b846b2cbd6f6169141917283aae2"},
-    {file = "lxml-4.6.3-cp37-cp37m-manylinux2014_x86_64.whl", hash = "sha256:cdaf11d2bd275bf391b5308f86731e5194a21af45fbaaaf1d9e8147b9160ea92"},
     {file = "lxml-4.6.3-cp37-cp37m-win32.whl", hash = "sha256:3439c71103ef0e904ea0a1901611863e51f50b5cd5e8654a151740fde5e1cade"},
     {file = "lxml-4.6.3-cp37-cp37m-win_amd64.whl", hash = "sha256:4289728b5e2000a4ad4ab8da6e1db2e093c63c08bdc0414799ee776a3f78da4b"},
     {file = "lxml-4.6.3-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:b007cbb845b28db4fb8b6a5cdcbf65bacb16a8bd328b53cbc0698688a68e1caa"},
     {file = "lxml-4.6.3-cp38-cp38-manylinux1_i686.whl", hash = "sha256:76fa7b1362d19f8fbd3e75fe2fb7c79359b0af8747e6f7141c338f0bee2f871a"},
     {file = "lxml-4.6.3-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:26e761ab5b07adf5f555ee82fb4bfc35bf93750499c6c7614bd64d12aaa67927"},
-    {file = "lxml-4.6.3-cp38-cp38-manylinux2010_i686.whl", hash = "sha256:e1cbd3f19a61e27e011e02f9600837b921ac661f0c40560eefb366e4e4fb275e"},
     {file = "lxml-4.6.3-cp38-cp38-manylinux2014_aarch64.whl", hash = "sha256:66e575c62792c3f9ca47cb8b6fab9e35bab91360c783d1606f758761810c9791"},
-    {file = "lxml-4.6.3-cp38-cp38-manylinux2014_x86_64.whl", hash = "sha256:1b38116b6e628118dea5b2186ee6820ab138dbb1e24a13e478490c7db2f326ae"},
     {file = "lxml-4.6.3-cp38-cp38-win32.whl", hash = "sha256:89b8b22a5ff72d89d48d0e62abb14340d9e99fd637d046c27b8b257a01ffbe28"},
     {file = "lxml-4.6.3-cp38-cp38-win_amd64.whl", hash = "sha256:2a9d50e69aac3ebee695424f7dbd7b8c6d6eb7de2a2eb6b0f6c7db6aa41e02b7"},
     {file = "lxml-4.6.3-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:ce256aaa50f6cc9a649c51be3cd4ff142d67295bfc4f490c9134d0f9f6d58ef0"},
     {file = "lxml-4.6.3-cp39-cp39-manylinux1_i686.whl", hash = "sha256:7610b8c31688f0b1be0ef882889817939490a36d0ee880ea562a4e1399c447a1"},
     {file = "lxml-4.6.3-cp39-cp39-manylinux1_x86_64.whl", hash = "sha256:f8380c03e45cf09f8557bdaa41e1fa7c81f3ae22828e1db470ab2a6c96d8bc23"},
-    {file = "lxml-4.6.3-cp39-cp39-manylinux2010_i686.whl", hash = "sha256:3082c518be8e97324390614dacd041bb1358c882d77108ca1957ba47738d9d59"},
     {file = "lxml-4.6.3-cp39-cp39-manylinux2014_aarch64.whl", hash = "sha256:884ab9b29feaca361f7f88d811b1eea9bfca36cf3da27768d28ad45c3ee6f969"},
-    {file = "lxml-4.6.3-cp39-cp39-manylinux2014_x86_64.whl", hash = "sha256:6f12e1427285008fd32a6025e38e977d44d6382cf28e7201ed10d6c1698d2a9a"},
     {file = "lxml-4.6.3-cp39-cp39-win32.whl", hash = "sha256:33bb934a044cf32157c12bfcfbb6649807da20aa92c062ef51903415c704704f"},
     {file = "lxml-4.6.3-cp39-cp39-win_amd64.whl", hash = "sha256:542d454665a3e277f76954418124d67516c5f88e51a900365ed54a9806122b83"},
-    {file = "lxml-4.6.3.tar.gz", hash = "sha256:39b78571b3b30645ac77b95f7c69d1bffc4cf8c3b157c435a34da72e78c82468"},
 ]
 markdown = [
     {file = "Markdown-3.3.4-py3-none-any.whl", hash = "sha256:96c3ba1261de2f7547b46a00ea8463832c921d3f9d6aba3f255a6f71386db20c"},
@@ -3991,27 +5079,6 @@ markupsafe = [
     {file = "MarkupSafe-2.0.1-cp39-cp39-win32.whl", hash = "sha256:10f82115e21dc0dfec9ab5c0223652f7197feb168c940f3ef61563fc2d6beb74"},
     {file = "MarkupSafe-2.0.1-cp39-cp39-win_amd64.whl", hash = "sha256:693ce3f9e70a6cf7d2fb9e6c9d8b204b6b39897a2c4a1aa65728d5ac97dcc1d8"},
     {file = "MarkupSafe-2.0.1.tar.gz", hash = "sha256:594c67807fb16238b30c44bdf74f36c02cdf22d1c8cda91ef8a0ed8dabf5620a"},
-]
-matplotlib = [
-    {file = "matplotlib-3.4.2-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:c541ee5a3287efe066bbe358320853cf4916bc14c00c38f8f3d8d75275a405a9"},
-    {file = "matplotlib-3.4.2-cp37-cp37m-manylinux1_i686.whl", hash = "sha256:3a5c18dbd2c7c366da26a4ad1462fe3e03a577b39e3b503bbcf482b9cdac093c"},
-    {file = "matplotlib-3.4.2-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:a9d8cb5329df13e0cdaa14b3b43f47b5e593ec637f13f14db75bb16e46178b05"},
-    {file = "matplotlib-3.4.2-cp37-cp37m-manylinux2014_aarch64.whl", hash = "sha256:7ad19f3fb6145b9eb41c08e7cbb9f8e10b91291396bee21e9ce761bb78df63ec"},
-    {file = "matplotlib-3.4.2-cp37-cp37m-win32.whl", hash = "sha256:7a58f3d8fe8fac3be522c79d921c9b86e090a59637cb88e3bc51298d7a2c862a"},
-    {file = "matplotlib-3.4.2-cp37-cp37m-win_amd64.whl", hash = "sha256:6382bc6e2d7e481bcd977eb131c31dee96e0fb4f9177d15ec6fb976d3b9ace1a"},
-    {file = "matplotlib-3.4.2-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:6a6a44f27aabe720ec4fd485061e8a35784c2b9ffa6363ad546316dfc9cea04e"},
-    {file = "matplotlib-3.4.2-cp38-cp38-manylinux1_i686.whl", hash = "sha256:1c1779f7ab7d8bdb7d4c605e6ffaa0614b3e80f1e3c8ccf7b9269a22dbc5986b"},
-    {file = "matplotlib-3.4.2-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:5826f56055b9b1c80fef82e326097e34dc4af8c7249226b7dd63095a686177d1"},
-    {file = "matplotlib-3.4.2-cp38-cp38-manylinux2014_aarch64.whl", hash = "sha256:0bea5ec5c28d49020e5d7923c2725b837e60bc8be99d3164af410eb4b4c827da"},
-    {file = "matplotlib-3.4.2-cp38-cp38-win32.whl", hash = "sha256:6475d0209024a77f869163ec3657c47fed35d9b6ed8bccba8aa0f0099fbbdaa8"},
-    {file = "matplotlib-3.4.2-cp38-cp38-win_amd64.whl", hash = "sha256:21b31057bbc5e75b08e70a43cefc4c0b2c2f1b1a850f4a0f7af044eb4163086c"},
-    {file = "matplotlib-3.4.2-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:b26535b9de85326e6958cdef720ecd10bcf74a3f4371bf9a7e5b2e659c17e153"},
-    {file = "matplotlib-3.4.2-cp39-cp39-manylinux1_i686.whl", hash = "sha256:32fa638cc10886885d1ca3d409d4473d6a22f7ceecd11322150961a70fab66dd"},
-    {file = "matplotlib-3.4.2-cp39-cp39-manylinux1_x86_64.whl", hash = "sha256:956c8849b134b4a343598305a3ca1bdd3094f01f5efc8afccdebeffe6b315247"},
-    {file = "matplotlib-3.4.2-cp39-cp39-manylinux2014_aarch64.whl", hash = "sha256:85f191bb03cb1a7b04b5c2cca4792bef94df06ef473bc49e2818105671766fee"},
-    {file = "matplotlib-3.4.2-cp39-cp39-win32.whl", hash = "sha256:b1d5a2cedf5de05567c441b3a8c2651fbde56df08b82640e7f06c8cd91e201f6"},
-    {file = "matplotlib-3.4.2-cp39-cp39-win_amd64.whl", hash = "sha256:df815378a754a7edd4559f8c51fc7064f779a74013644a7f5ac7a0c31f875866"},
-    {file = "matplotlib-3.4.2.tar.gz", hash = "sha256:d8d994cefdff9aaba45166eb3de4f5211adb4accac85cbf97137e98f26ea0219"},
 ]
 matplotlib-inline = [
     {file = "matplotlib-inline-0.1.2.tar.gz", hash = "sha256:f41d5ff73c9f5385775d5c0bc13b424535c8402fe70ea8210f93e11f3683993e"},
@@ -4176,8 +5243,8 @@ nvidia-ml-py3 = [
     {file = "nvidia-ml-py3-7.352.0.tar.gz", hash = "sha256:390f02919ee9d73fe63a98c73101061a6b37fa694a793abf56673320f1f51277"},
 ]
 oaknorth-ml-tools = [
-    {file = "oaknorth-ml-tools-1.6.0.tar.gz", hash = "sha256:90ead5bbb21d8d0155030bb941e40c0106f64cf044a58f56e4ce8f4d35afdc78"},
-    {file = "oaknorth_ml_tools-1.6.0-py3-none-any.whl", hash = "sha256:410baaa494b1abb644dcec2d5259820372aedb6984d57f5c230fc708ba7ad5d6"},
+    {file = "oaknorth-ml-tools-1.6.1.tar.gz", hash = "sha256:ce8d95a34ff407995358db234e6a9a47155e2322b21f2db1755b0dea2f03f689"},
+    {file = "oaknorth_ml_tools-1.6.1-py3-none-any.whl", hash = "sha256:a25be92d22ae1beef51a6d4bef341127ebbc6602e1e360c59df1464909a8704f"},
 ]
 oauthlib = [
     {file = "oauthlib-3.1.1-py2.py3-none-any.whl", hash = "sha256:42bf6354c2ed8c6acb54d971fce6f88193d97297e18602a3a886603f9d7730cc"},
@@ -4327,7 +5394,6 @@ pillow = [
     {file = "Pillow-8.2.0-pp37-pypy37_pp73-manylinux2010_i686.whl", hash = "sha256:aac00e4bc94d1b7813fe882c28990c1bc2f9d0e1aa765a5f2b516e8a6a16a9e4"},
     {file = "Pillow-8.2.0-pp37-pypy37_pp73-manylinux2010_x86_64.whl", hash = "sha256:22fd0f42ad15dfdde6c581347eaa4adb9a6fc4b865f90b23378aa7914895e120"},
     {file = "Pillow-8.2.0-pp37-pypy37_pp73-win32.whl", hash = "sha256:e98eca29a05913e82177b3ba3d198b1728e164869c613d76d0de4bde6768a50e"},
-    {file = "Pillow-8.2.0-pp37-pypy37_pp73-win_amd64.whl", hash = "sha256:8b56553c0345ad6dcb2e9b433ae47d67f95fc23fe28a0bde15a120f25257e291"},
     {file = "Pillow-8.2.0.tar.gz", hash = "sha256:a787ab10d7bb5494e5f76536ac460741788f1fbce851068d73a87ca7c35fc3e1"},
 ]
 plac = [
@@ -4470,34 +5536,12 @@ pyarrow = [
     {file = "pyarrow-0.14.1-cp37-cp37m-manylinux2010_x86_64.whl", hash = "sha256:1a90a10b056eb74646aa7b6eecef7adf872d120d33d70da67d984eb39cc51072"},
 ]
 pyasn1 = [
-    {file = "pyasn1-0.4.8-py2.4.egg", hash = "sha256:fec3e9d8e36808a28efb59b489e4528c10ad0f480e57dcc32b4de5c9d8c9fdf3"},
-    {file = "pyasn1-0.4.8-py2.5.egg", hash = "sha256:0458773cfe65b153891ac249bcf1b5f8f320b7c2ce462151f8fa74de8934becf"},
-    {file = "pyasn1-0.4.8-py2.6.egg", hash = "sha256:5c9414dcfede6e441f7e8f81b43b34e834731003427e5b09e4e00e3172a10f00"},
-    {file = "pyasn1-0.4.8-py2.7.egg", hash = "sha256:6e7545f1a61025a4e58bb336952c5061697da694db1cae97b116e9c46abcf7c8"},
     {file = "pyasn1-0.4.8-py2.py3-none-any.whl", hash = "sha256:39c7e2ec30515947ff4e87fb6f456dfc6e84857d34be479c9d4a4ba4bf46aa5d"},
-    {file = "pyasn1-0.4.8-py3.1.egg", hash = "sha256:78fa6da68ed2727915c4767bb386ab32cdba863caa7dbe473eaae45f9959da86"},
-    {file = "pyasn1-0.4.8-py3.2.egg", hash = "sha256:08c3c53b75eaa48d71cf8c710312316392ed40899cb34710d092e96745a358b7"},
-    {file = "pyasn1-0.4.8-py3.3.egg", hash = "sha256:03840c999ba71680a131cfaee6fab142e1ed9bbd9c693e285cc6aca0d555e576"},
-    {file = "pyasn1-0.4.8-py3.4.egg", hash = "sha256:7ab8a544af125fb704feadb008c99a88805126fb525280b2270bb25cc1d78a12"},
-    {file = "pyasn1-0.4.8-py3.5.egg", hash = "sha256:e89bf84b5437b532b0803ba5c9a5e054d21fec423a89952a74f87fa2c9b7bce2"},
-    {file = "pyasn1-0.4.8-py3.6.egg", hash = "sha256:014c0e9976956a08139dc0712ae195324a75e142284d5f87f1a87ee1b068a359"},
-    {file = "pyasn1-0.4.8-py3.7.egg", hash = "sha256:99fcc3c8d804d1bc6d9a099921e39d827026409a58f2a720dcdb89374ea0c776"},
     {file = "pyasn1-0.4.8.tar.gz", hash = "sha256:aef77c9fb94a3ac588e87841208bdec464471d9871bd5050a287cc9a475cd0ba"},
 ]
 pyasn1-modules = [
     {file = "pyasn1-modules-0.2.8.tar.gz", hash = "sha256:905f84c712230b2c592c19470d3ca8d552de726050d1d1716282a1f6146be65e"},
-    {file = "pyasn1_modules-0.2.8-py2.4.egg", hash = "sha256:0fe1b68d1e486a1ed5473f1302bd991c1611d319bba158e98b106ff86e1d7199"},
-    {file = "pyasn1_modules-0.2.8-py2.5.egg", hash = "sha256:fe0644d9ab041506b62782e92b06b8c68cca799e1a9636ec398675459e031405"},
-    {file = "pyasn1_modules-0.2.8-py2.6.egg", hash = "sha256:a99324196732f53093a84c4369c996713eb8c89d360a496b599fb1a9c47fc3eb"},
-    {file = "pyasn1_modules-0.2.8-py2.7.egg", hash = "sha256:0845a5582f6a02bb3e1bde9ecfc4bfcae6ec3210dd270522fee602365430c3f8"},
     {file = "pyasn1_modules-0.2.8-py2.py3-none-any.whl", hash = "sha256:a50b808ffeb97cb3601dd25981f6b016cbb3d31fbf57a8b8a87428e6158d0c74"},
-    {file = "pyasn1_modules-0.2.8-py3.1.egg", hash = "sha256:f39edd8c4ecaa4556e989147ebf219227e2cd2e8a43c7e7fcb1f1c18c5fd6a3d"},
-    {file = "pyasn1_modules-0.2.8-py3.2.egg", hash = "sha256:b80486a6c77252ea3a3e9b1e360bc9cf28eaac41263d173c032581ad2f20fe45"},
-    {file = "pyasn1_modules-0.2.8-py3.3.egg", hash = "sha256:65cebbaffc913f4fe9e4808735c95ea22d7a7775646ab690518c056784bc21b4"},
-    {file = "pyasn1_modules-0.2.8-py3.4.egg", hash = "sha256:15b7c67fabc7fc240d87fb9aabf999cf82311a6d6fb2c70d00d3d0604878c811"},
-    {file = "pyasn1_modules-0.2.8-py3.5.egg", hash = "sha256:426edb7a5e8879f1ec54a1864f16b882c2837bfd06eee62f2c982315ee2473ed"},
-    {file = "pyasn1_modules-0.2.8-py3.6.egg", hash = "sha256:cbac4bc38d117f2a49aeedec4407d23e8866ea4ac27ff2cf7fb3e5b570df19e0"},
-    {file = "pyasn1_modules-0.2.8-py3.7.egg", hash = "sha256:c29a5e5cc7a3f05926aff34e097e84f8589cd790ce0ed41b67aed6857b26aafd"},
 ]
 pybind11 = [
     {file = "pybind11-2.6.2-py2.py3-none-any.whl", hash = "sha256:2d8aebe1709bc367e34e3b23d8eccbf3f387ee9d5640548c6260d33b59f02405"},
@@ -4598,38 +5642,6 @@ pytorch-lightning = [
 pytz = [
     {file = "pytz-2021.1-py2.py3-none-any.whl", hash = "sha256:eb10ce3e7736052ed3623d49975ce333bcd712c7bb19a58b9e2089d4057d0798"},
     {file = "pytz-2021.1.tar.gz", hash = "sha256:83a4a90894bf38e243cf052c8b58f381bfe9a7a483f6a9cab140bc7f702ac4da"},
-]
-pywavelets = [
-    {file = "PyWavelets-1.1.1-cp35-cp35m-macosx_10_6_intel.whl", hash = "sha256:35959c041ec014648575085a97b498eafbbaa824f86f6e4a59bfdef8a3fe6308"},
-    {file = "PyWavelets-1.1.1-cp35-cp35m-manylinux1_i686.whl", hash = "sha256:55e39ec848ceec13c9fa1598253ae9dd5c31d09dfd48059462860d2b908fb224"},
-    {file = "PyWavelets-1.1.1-cp35-cp35m-manylinux1_x86_64.whl", hash = "sha256:c06d2e340c7bf8b9ec71da2284beab8519a3908eab031f4ea126e8ccfc3fd567"},
-    {file = "PyWavelets-1.1.1-cp35-cp35m-win32.whl", hash = "sha256:be105382961745f88d8196bba5a69ee2c4455d87ad2a2e5d1eed6bd7fda4d3fd"},
-    {file = "PyWavelets-1.1.1-cp35-cp35m-win_amd64.whl", hash = "sha256:076ca8907001fdfe4205484f719d12b4a0262dfe6652fa1cfc3c5c362d14dc84"},
-    {file = "PyWavelets-1.1.1-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:7947e51ca05489b85928af52a34fe67022ab5b81d4ae32a4109a99e883a0635e"},
-    {file = "PyWavelets-1.1.1-cp36-cp36m-manylinux1_i686.whl", hash = "sha256:9e2528823ccf5a0a1d23262dfefe5034dce89cd84e4e124dc553dfcdf63ebb92"},
-    {file = "PyWavelets-1.1.1-cp36-cp36m-manylinux1_x86_64.whl", hash = "sha256:80b924edbc012ded8aa8b91cb2fd6207fb1a9a3a377beb4049b8a07445cec6f0"},
-    {file = "PyWavelets-1.1.1-cp36-cp36m-manylinux2014_aarch64.whl", hash = "sha256:c2a799e79cee81a862216c47e5623c97b95f1abee8dd1f9eed736df23fb653fb"},
-    {file = "PyWavelets-1.1.1-cp36-cp36m-win32.whl", hash = "sha256:d510aef84d9852653d079c84f2f81a82d5d09815e625f35c95714e7364570ad4"},
-    {file = "PyWavelets-1.1.1-cp36-cp36m-win_amd64.whl", hash = "sha256:889d4c5c5205a9c90118c1980df526857929841df33e4cd1ff1eff77c6817a65"},
-    {file = "PyWavelets-1.1.1-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:68b5c33741d26c827074b3d8f0251de1c3019bb9567b8d303eb093c822ce28f1"},
-    {file = "PyWavelets-1.1.1-cp37-cp37m-manylinux1_i686.whl", hash = "sha256:18a51b3f9416a2ae6e9a35c4af32cf520dd7895f2b69714f4aa2f4342fca47f9"},
-    {file = "PyWavelets-1.1.1-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:cfe79844526dd92e3ecc9490b5031fca5f8ab607e1e858feba232b1b788ff0ea"},
-    {file = "PyWavelets-1.1.1-cp37-cp37m-manylinux2014_aarch64.whl", hash = "sha256:2f7429eeb5bf9c7068002d0d7f094ed654c77a70ce5e6198737fd68ab85f8311"},
-    {file = "PyWavelets-1.1.1-cp37-cp37m-win32.whl", hash = "sha256:720dbcdd3d91c6dfead79c80bf8b00a1d8aa4e5d551dc528c6d5151e4efc3403"},
-    {file = "PyWavelets-1.1.1-cp37-cp37m-win_amd64.whl", hash = "sha256:bc5e87b72371da87c9bebc68e54882aada9c3114e640de180f62d5da95749cd3"},
-    {file = "PyWavelets-1.1.1-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:98b2669c5af842a70cfab33a7043fcb5e7535a690a00cd251b44c9be0be418e5"},
-    {file = "PyWavelets-1.1.1-cp38-cp38-manylinux1_i686.whl", hash = "sha256:e02a0558e0c2ac8b8bbe6a6ac18c136767ec56b96a321e0dfde2173adfa5a504"},
-    {file = "PyWavelets-1.1.1-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:6162dc0ae04669ea04b4b51420777b9ea2d30b0a9d02901b2a3b4d61d159c2e9"},
-    {file = "PyWavelets-1.1.1-cp38-cp38-manylinux2014_aarch64.whl", hash = "sha256:39c74740718e420d38c78ca4498568fa57976d78d5096277358e0fa9629a7aea"},
-    {file = "PyWavelets-1.1.1-cp38-cp38-win32.whl", hash = "sha256:79f5b54f9dc353e5ee47f0c3f02bebd2c899d49780633aa771fed43fa20b3149"},
-    {file = "PyWavelets-1.1.1-cp38-cp38-win_amd64.whl", hash = "sha256:935ff247b8b78bdf77647fee962b1cc208c51a7b229db30b9ba5f6da3e675178"},
-    {file = "PyWavelets-1.1.1-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:6ebfefebb5c6494a3af41ad8c60248a95da267a24b79ed143723d4502b1fe4d7"},
-    {file = "PyWavelets-1.1.1-cp39-cp39-manylinux1_i686.whl", hash = "sha256:6bc78fb9c42a716309b4ace56f51965d8b5662c3ba19d4591749f31773db1125"},
-    {file = "PyWavelets-1.1.1-cp39-cp39-manylinux1_x86_64.whl", hash = "sha256:411e17ca6ed8cf5e18a7ca5ee06a91c25800cc6c58c77986202abf98d749273a"},
-    {file = "PyWavelets-1.1.1-cp39-cp39-manylinux2014_aarch64.whl", hash = "sha256:83c5e3eb78ce111c2f0b45f46106cc697c3cb6c4e5f51308e1f81b512c70c8fb"},
-    {file = "PyWavelets-1.1.1-cp39-cp39-win32.whl", hash = "sha256:2b634a54241c190ee989a4af87669d377b37c91bcc9cf0efe33c10ff847f7841"},
-    {file = "PyWavelets-1.1.1-cp39-cp39-win_amd64.whl", hash = "sha256:732bab78435c48be5d6bc75486ef629d7c8f112e07b313bf1f1a2220ab437277"},
-    {file = "PyWavelets-1.1.1.tar.gz", hash = "sha256:1a64b40f6acb4ffbaccce0545d7fc641744f95351f62e4c6aaa40549326008c9"},
 ]
 pywin32 = [
     {file = "pywin32-301-cp35-cp35m-win32.whl", hash = "sha256:93367c96e3a76dfe5003d8291ae16454ca7d84bb24d721e0b74a07610b7be4a7"},
@@ -4791,7 +5803,6 @@ requests-kerberos = [
 requests-oauthlib = [
     {file = "requests-oauthlib-1.3.0.tar.gz", hash = "sha256:b4261601a71fd721a8bd6d7aa1cc1d6a8a93b4a9f5e96626f8e4d91e8beeaa6a"},
     {file = "requests_oauthlib-1.3.0-py2.py3-none-any.whl", hash = "sha256:7f71572defaecd16372f9006f33c2ec8c077c3cfa6f5911a9a90202beb513f3d"},
-    {file = "requests_oauthlib-1.3.0-py3.7.egg", hash = "sha256:fa6c47b933f01060936d87ae9327fead68768b69c6c9ea2109c48be30f2d4dbc"},
 ]
 retrying = [
     {file = "retrying-1.3.3.tar.gz", hash = "sha256:08c039560a6da2fe4f2c426d0766e284d3b736e355f8dd24b37367b0bb41973b"},
